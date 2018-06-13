@@ -1,0 +1,926 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+#Home .left, #Home .right {
+	position: relative;
+}
+
+.HRight a {
+    color: #999;
+}
+
+.HRight .active a {
+    color: #fff;
+}
+
+html, body {
+    background-color: #242A34;
+}
+
+@font-face {
+    font-family: 'Exo2-Bold';
+    /*字体名称*/
+    src: url('../fonts/Exo2-Bold.ttf');
+    /*字体源文件*/
+}
+
+@font-face {
+    font-family: 'Exo2-Light';
+    /*字体名称*/
+    src: url('../fonts/Exo2-Light.ttf');
+    /*字体源文件*/
+}
+
+@font-face {
+    font-family: 'Exo2-Medium';
+    /*字体名称*/
+    src: url('../fonts/Exo2-Medium.ttf');
+    /*字体源文件*/
+}
+
+@font-face {
+    font-family: 'Exo2-Regular';
+    /*字体名称*/
+    src: url('../fonts/Exo2-Regular.ttf');
+    /*字体源文件*/
+}
+
+@font-face {
+    font-family: 'Exo2-SemiBold';
+    /*字体名称*/
+    src: url('../fonts/Exo2-SemiBold.ttf');
+    /*字体源文件*/
+}
+
+@font-face {
+    font-family: 'Exo2-Thin';
+    /*字体名称*/
+    src: url('../fonts/Exo2-Thin.ttf');
+    /*字体源文件*/
+}
+
+#app {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    padding: 0 10%;
+}
+
+.header .HLeft img {
+    width: 100px;
+}
+
+.header .HRight {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .HRight span {
+    color: #999;
+    text-align: center;
+    position: relative;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: Exo2-Bold;
+    padding: 0px 21px;
+    display: inline-block;
+}
+
+.header .HRight span.active {
+    color: white;
+}
+
+.header .HRight .lan {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    color: #F0F0F0;
+    font-size: 0.6rem;
+    justify-content: center;
+}
+
+.header .HRight .lan img:nth-of-type(1) {
+    width: 20px;
+}
+
+.header .HRight .lan p {
+    margin-left: 10px;
+}
+
+.header .HRight .lan img:nth-of-type(2) {
+    width: 20px;
+}
+
+#Home {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    padding: 0 10%;
+}
+
+#Home .left, #Home .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Home .left {
+    align-items: flex-start;
+}
+
+#Home .left p {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: Exo2-Medium;
+}
+
+#Home .left .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#Home .left .title .bd {
+    background: #34A9FF;
+    width: 1px;
+    height: 15px;
+    transform: rotateZ(30deg);
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+#Home .left .title .name {
+    color: #34A9FF;
+    line-height: 20px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-family: Exo2-Bold;
+}
+
+#Home .left .s {
+    color: #666666;
+    font-size: 0.9rem;
+    margin-top: 3px;
+    line-height: 22px;
+    font-family: Exo2-Medium;
+}
+
+#Home .btns {
+    background: #34A9FF;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.6rem;
+    color: white;
+    -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    font-family: Exo2-Medium;
+}
+
+#Home .left .ud {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Exo2-SemiBold;
+}
+
+#Home .left .ud img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+#Home .left .ud span {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+}
+
+#Home .right img {
+    width: 400px;
+}
+
+#Home .left .wrap {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#Home .left .wrap .cell {
+    flex: 1;
+    margin: 1%;
+    vertical-align: top;
+    background: #14111D;
+    display: inline-block;
+    text-align: left;
+}
+
+#Home .left .wrap .cell img {
+    width: 100%;
+    height: 190px;
+}
+
+#Home .left .wrap .cell span {
+    display: block;
+}
+
+#Home .left .pater img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+#Home .left .btm {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+#Home .left .btm .btmL {
+    width: 300px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#Home .left .btm .btmR {
+    display: flex;
+    align-items: center;
+}
+
+.footers .left .btm {
+    display: block !important;
+}
+
+.footers .left .btmL {
+    margin: 30px auto;
+}
+
+.footers .left .btmR {
+    margin: 0 auto;
+    width: 404px;
+}
+
+.footer img {
+    width: 100px;
+}
+
+.footer .cl {
+    width: 100%;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 15px;
+    margin-top: 20px;
+}
+
+.footer .cl span {
+    font-size: 0.6rem;
+    margin-right: 15px;
+    font-family: Exo2-Medium;
+}
+
+.link {
+    font-size: 0.6rem;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 30px;
+    color: #333333;
+    margin-bottom: 100px;
+}
+
+.links {
+    font-size: 0.6rem;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 30px;
+    color: #333333;
+    margin-bottom: 100px;
+}
+
+.homes .wrap {
+    display: flex;
+    align-items: center;
+}
+
+.homes .cell {
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 365px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.homes .cell .s span {
+    color: #666666;
+}
+
+.homes .cell span.s {
+    position: relative;
+}
+
+.homes .cell:hover {
+    border: 1px solid #34A9FF;
+    overflow: inherit;
+}
+
+.homes .cell:hover span.s {}
+
+/*.homes .cell:hover span.s>span{*/
+
+/*position: relative;*/
+
+/*top:-3px;*/
+
+/*}*/
+
+/*.homes .cell:hover .s>span{*/
+
+/*overflow: inherit!important;*/
+
+/*background: rgb(19,17,28);*/
+
+/*height: auto;*/
+
+/*width: calc(100% + 22px);*/
+
+/*border-bottom: 1px solid #34A9FF;*/
+
+/*border-left: 1px solid #34A9FF;*/
+
+/*border-right: 1px solid #34A9FF;*/
+
+/*padding-bottom:20px;*/
+
+/*padding: 0 10px 10px 10px;*/
+
+/*position: relative;*/
+
+/*left: -11px;*/
+
+/*}*/
+
+.con {
+    cursor: pointer;
+}
+
+.con .ts1 {
+    display: none;
+}
+
+.con:hover .ts {
+    display: none;
+}
+
+.con:hover .ts1 {
+    display: inline-block;
+}
+
+#Home .left .wrap .cell span:nth-child(2) {
+    font-family: Exo2-Medium;
+}
+
+#Home .left .wrap .cell span:nth-child(3) {
+    font-family: Exo2-Bold;
+}
+
+#Home .left .wrap .cell span:nth-child(4) {
+    font-family: Exo2-Regular;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    just-contents: center;
+    margin-top: 80px;
+}
+
+.lefts {
+    display: none !important;
+}
+
+.rights {
+    display: inherit !important;
+}
+
+.mobel {
+    display: none;
+}
+
+.titles {
+    width: 100%;
+    font-family: Exo2-Medium;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.conts {
+    width: 60%;
+    margin: 0 20%;
+    font-family: PingFangSC-Regular;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 32px;
+    color: #778592;
+    margin-top: 20px;
+}
+
+.roadmapbox {
+    text-align: center;
+    margin: 115px auto 183px auto;
+}
+
+.roadmap {
+    margin: 0 auto;
+}
+
+.logos {
+    width: 500px;
+    margin: -80px auto -100px auto;
+}
+
+/*自适应*/
+
+@media screen and (max-width: 856px) {
+    .logos {
+        width: 100%;
+    }
+    .header {
+        display: inline-block;
+        padding-top: 40px;
+    }
+    .header .HRight {
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    .header .HRight span {
+        padding: 0 3px;
+        width: 100px;
+        margin-bottom: 15px;
+    }
+    .lan {
+        margin-top: 20px;
+        position: absolute;
+        right: 20px;
+        top: 0;
+    }
+    .HLeft {
+        text-align: center;
+    }
+    .HLeft img {
+        margin: 0 auto 40px auto;
+    }
+    .header .HRight {
+        width: 100%;
+    }
+    #Home {
+        padding: 0 5% !important;
+        margin-top: 140px !important;
+        height: auto !important;
+        min-height: auto !important;
+        display: inline-block;
+    }
+    #Home.Alpha {
+        width: 100% !important;
+        padding-bottom: 30px !important;
+    }
+    #Home .left {
+        font-size: 16px;
+        width: 100%;
+        justify-content: baseline;
+    }
+    #Home .left p {
+        font-size: 16px;
+        line-height: 45px;
+    }
+    #Home .left .s {
+        width: 100% !important;
+    }
+    #Home .btns {
+        width: 100px;
+    }
+    .button {
+        margin-top: 24px;
+    }
+    #Home .right {
+        margin-top: 50px;
+        width: 100%;
+    }
+    #Home .right img {
+        width: 90% !important;
+        margin: 0 5%;
+    }
+    #Home .left {
+        margin-top: 45px;
+        align-items: left !important;
+    }
+    .rights {
+        display: none !important;
+    }
+    .lefts {
+        display: inherit !important;
+    }
+    .tss {
+        margin: 0 auto;
+    }
+    #Home .left .title {
+        margin-bottom: 0;
+    }
+    .map {
+        width: 80% !important;
+        margin: 0 10%;
+    }
+    .ts {
+        text-align: left !important;
+    }
+    .hz .cell {
+        width: 100% !important;
+        border: 0 !important;
+    }
+    .homes .wrap {
+        width: 100%;
+        display: inline-block !important;
+    }
+    .homes .cell {
+        flex: none !important;
+        width: 100%;
+    }
+    .pater {
+        width: 100%;
+    }
+    .con {
+        width: 25%;
+        display: block;
+        float: left;
+        text-align: center;
+    }
+    .con a {
+        margin: 0 auto;
+    }
+    .footers .btm {
+        display: block !important;
+        margin-top: 80px !important;
+        margin-bottom: 80px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footers .btm .btmR {
+        width: 100%;
+        margin-top: 31px;
+        display: inline-block !important;
+    }
+    .footers .btm .btmR svg {
+        width: 100%;
+    }
+    .footers .btm .btmR input {
+        padding: 18px 40px !important;
+    }
+    .footers .btm .btmR .btns {
+        width: 100% !important;
+        margin-top: 34px;
+        margin-left: 0 !important;
+    }
+    #Home .left .btm .btmL {
+        width: 100%;
+        text-align: center;
+    }
+    .pc {
+        display: none;
+    }
+    .mobel {
+        display: block;
+    }
+    .titles {
+        margin-bottom: 42px;
+    }
+    .conts {
+        width: 80%;
+        margin: 0 10%;
+    }
+    .roadmapbox {
+        text-align: center;
+        margin: 115px auto 103px auto;
+    }
+    .token svg {
+        width: 100%;
+    }
+    .token .s {
+        text-align: left !important;
+    }
+    .token .right svg {
+        width: 90%;
+        margin: 0 5%;
+    }
+    .token .tits {
+        margin-left: 5%;
+    }
+    .token .left {
+        margin-top: 0 !important;
+        padding-top: 30px !important;
+    }
+    .headers .left {
+        text-align: center !important;
+    }
+    .headers .s {
+        text-align: left !important;
+    }
+}
+
+.showProgress {
+    color: #fff;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+}
+
+.showProgress>div {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+    overflow: hidden;
+    display: inline-block !important;
+}
+
+.showProgress>div .aui-toast-content {
+    padding: 10px 20px;
+}
+
+.phonebox {
+    width: 311px;
+    /* height: 647.22px; */
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0 auto;
+    border: 55px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-image: url(../image/bgs.png) 120 47 stretch;
+}
+
+#Home .swiper-pagination {
+    position: relative;
+    margin: 0 auto;
+}
+
+#Home .swiper-pagination span {
+    margin: 0 3px;
+}
+
+.swiper-container {
+    width: 252px;
+    top: 0px;
+    overflow: initial !important;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -101px !important;
+    left: 0;
+    width: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    background: #383838 !important;
+    opacity: 2 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007aff !important;
+}
+
+.lange {
+    position: relative;
+    cursor: pointer;
+}
+
+.lange .langebox {
+    position: absolute;
+    top: 24px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 7px 0px 0px 0px;
+    border-radius: 3px;
+    left: -32px;
+}
+
+.lange .langebox span {
+    display: inline-block;
+    clear: both;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.lange .langebox::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.lange .langebox span i {
+    color: rgba(255, 255, 255, 0);
+    margin-right: 5px;
+}
+
+.lange .langebox span.active i {
+    color: #fff;
+    margin-right: 5px;
+    font-style: inherit;
+}
+
+[v-cloak] {
+    display: none
+}
+
+/* END */
+
+#boxModel {
+    position: fixed;
+    z-index: 99998;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+}
+
+#popBox {
+    position: fixed;
+    z-index: 99999;
+    display: block;
+    width: 80%;
+    height: calc(100% - 40px);
+    top: 0;
+    left: 10%;
+    padding: 20px 0;
+}
+
+#popBox .closeBtn {
+    position: absolute;
+    z-index: 99999;
+    top: 35px;
+    right: 15px;
+    display: block;
+    overflow: hidden;
+    width: 36px;
+    height: 36px;
+    transition: opacity .5s ease 0s;
+    text-indent: -999px;
+    opacity: .8;
+    background: url(http://overwatch.nos.netease.com/1/images/heroes/detail/exit.3OOEf.png) 0 0 no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.w-light-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid rgba(0, 195, 255, .1);
+}
+
+.w-light-box .head {
+    height: 15%;
+    padding: .5em 0 0;
+    font-size: 12px;
+}
+
+.w-light-box .content {
+    height: 70%;
+    padding: 1em 0;
+    position: relative;
+}
+
+.w-light-box .title {
+    font-size: 2.8em;
+    padding-bottom: .2em;
+}
+
+.w-light-box video {
+    width: 100%;
+    height: 100%;
+}
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+@media only screen and (max-width: 768px) {
+    #popBox {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        padding: 0;
+    }
+    #popBox .closeBtn {
+        top: 25px;
+        right: 25px;
+        width: 1.5rem;
+    }
+    .w-light-box .title {
+        font-size: 1.8em;
+        padding-bottom: .2em;
+        line-height: 4rem;
+    }
+    .button p {
+        display: inline-grid;
+        width: 100%;
+    }
+    .button .btmR {
+        display: inline-block !important;
+    }
+    .button .btmR .btns {
+        margin: 20px 0 0 0 !important;
+        width: 100% !important;
+    }
+    .lange .langebox {
+        left: -5px;
+    }
+
+  #Home .left .wrap .cell{
+  		height:auto!important
+  }
+  .homes .cell span.s span{
+  	    height: auto;
+    overflow: hidden;
+    position: relative!important;
+  }
+  #Home .left .s{
+  	 position: relative!important;
+    height:auto!important;
+  }
+}
+
+.homes .cell {
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 365px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.homes .cell .s span {
+    color: #666666;
+}
+
+.homes .cell span.s {
+    position: relative;
+}
+.homes .cell span.s span{
+    position: absolute;top: 0;background: #14111D;border: 1px solid rgba(52, 169, 255,0);width: calc(100% + 22px);left: -11px;padding: 0px 10px 10px 10px;border-top: 0;
+}
+.homes .cell:hover {
+    border: 1px solid #34A9FF;
+    overflow: inherit;
+}
+
+.homes .cell:hover span.s {}
+.homes .cell:hover span.s span{
+    border: 1px solid rgba(52, 169, 255,1);
+    border-top:0px;
+    border-bottom: 0px;
+}
+.homes .cell:hover span.s span.ts{
+    border: 1px solid rgba(52, 169, 255,1)!important;
+    border-top:0px!important;
+}

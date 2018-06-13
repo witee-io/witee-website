@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>WITEE</title>
+    <meta itemprop="name" content="witee">
+    <meta name="keywords" content="WTE,WITEE,WITEE.IO,WTEHUB,WTEFUND,WTECYCLE,Robo-advisor,Smart investment,Robo-advisor" />
+    <meta name="description" itemprop="description" content="WITEE conducts big data collection and modeling on the public opinion of the digital cryptocurrency and transaction information, and then conducts deep learning for data model through artificial intelligence. After efficient strategy analysis, WITEE provides a variety of intelligent digital cryptocurrency investment services."
+    />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+    <link rel="shortcut icon" href="https://witee.laabit.com/image/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/index0.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/phone.css" />
+</head>
+
+<style media="screen">
+    #app {
+        overflow: hidden;
+    }
+
+    #Home .celling {
+        width: 550px;
+        height: 430px;
+        background: #323844;
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .none {
+        background: transparent !important;
+    }
+
+    .none:hover {
+        border: none !important;
+    }
+
+    .homes .cell span.s span {
+        line-height: 19px;
+    }
+
+    #Home .left,
+    #Home .right {
+        position: relative;
+    }
+
+    #Home.hehe .wrap .cell {
+        width: 25%;
+        padding: 20px;
+        margin: 0;
+        background: transparent;
+    }
+
+    #Home.hehe .wrap .cell img {
+        width: 100%;
+        height: auto !important;
+    }
+
+    #Home.hehe .pc {
+        width: 100%;
+        display: block;
+    }
+
+    #Home.hehe .phone {
+        width: 100%;
+        display: none;
+    }
+
+    #Home.haha .wrap .cell {
+        width: calc(100% / 6) !important;
+        padding: 20px;
+        margin: 0;
+        background: transparent;
+        flex: initial;
+    }
+
+    #Home.haha .wrap .cell img {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .lange .langebox {
+        z-index: 1000;
+    }
+
+    @media screen and (max-width: 856px) {
+        #Home .left .wrap {
+            flex-direction: column;
+        }
+        #Home .left .wrap .cell img {
+            display: block;
+            margin: 0 auto;
+        }
+        .none {
+            position: absolute;
+            z-index: -100;
+        }
+        #Home.haha .wrap .cell {
+            width: calc(100% / 4) !important;
+            padding: 10px;
+            margin: 0;
+            background: transparent;
+            /*border-right:1px solid #333;*/
+            flex: initial;
+        }
+        #Home.haha .wrap {
+            flex-direction: row !important;
+        }
+        #Home.hehe .pc {
+            width: 100%;
+            display: none;
+        }
+        #Home.hehe .phone {
+            width: 100%;
+            display: block;
+        }
+    }
+</style>
+
+<body>
+
+    <div id="app" v-cloak>
+
+        <a class="btops" href="#one"><img src="image/ttop.png" alt=""></a>
+
+        <!-- bg -->
+        <img class="bgs bgm" src="image/bg_oval.png" alt="">
+        <img class="bgs bg1" src="image/bg_shape_top_right.png" alt="">
+        <img class="bgs bg2" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg3" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg4" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg5" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg6" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg7" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg8" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg9" src="image/bg_shapes.png" alt="">
+
+        <div class="ups">
+            <div class="header" id="one">
+                <div class="HLeft">
+                    <a href="index.html"><img src="http://witee.laabit.com/image/logo@3x.png" alt=""></a>
+                </div>
+                <div class="HRight">
+                    <span :class="!type?'active':''"><a href="index_en.html">Home</a ></span>
+                    <span :class="type?'active':''"><a href="index_en.html?type=tdjs">Team</a ></span>
+                    <span><a href="news_en.html">News</a></span>
+                    <span><a href="roadmap_en.html">Roadmap</a></span>
+                    <span><a href="token_en.html">TOKEN</a></span>
+                    <span style="width: 163px;"><a href="ww_en.html">Witee-Weekly</a></span>
+                    <span style="width: 144px;"><a href="book/witee_en.pdf" target="_blank">WHITE PAPER</a></span>
+                    <span @click="fixFun"><a>Log in</a></span>
+                    <!--<span><a href="ico.html">ico</a></span>-->
+                    <div class="lan">
+                        <img src="http://witee.laabit.com/image/en.png" alt="">
+                        <div class="lange">
+                            <p @click="langesta = true">
+                                EN
+                            </p>
+                            <div class="langebox" v-if="langesta">
+                                <span @click="langefun('index.html')"><i>&radic;</i>CHT</span>
+                                <span class="active" @click="langefun('index_en.html')"><i>&radic;</i>EN</span>
+                            </div>
+                        </div>
+                        <img src="http://witee.laabit.com/image/down.png" style="cursor: pointer;" @click="langesta = true" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixs" v-show="fixBol">
+                <img @click="fixFun" class="clss" src="image/icon_close.png" alt="">
+                <p class="row1">Register as a WITEE member and receive WTE awards after WITEE is officially launched.<br>Limited quantity on a first-come-first-served basis.</p>
+                <p class="row2">WITEE will introduce KYC certification. Do not use multiple mailboxes and wallet addresses to register and receive rewards.</p>
+                <input type="text" v-model="youxiang" name="" value="" placeholder="E-mail">
+                <input type="text" v-model="mima" name="" value="" placeholder="Login password">
+                <input type="text" v-model="dizhi" name="" value="" placeholder="Wallet address">
+                <div class="btns1" @click="logFun" style="margin-left:0;">Register</div>
+            </div>
+
+            <div id="Home" style="margin-top: 132px;">
+                <div class="left" style="align-items:center!important;">
+                    <p>WITEE - Programmable Strategy Platform</p>
+                    <p>The Last Piece of Puzzle in the Era of Decentralized Exchange</p>
+                    <span class="s" style="margin-top:30px;width: 59%;;text-align:center;">A Decentralized, Intelligent Multi-level Digital Currency Service Platform.<br>WITEE integrates multi-service modules with different levels and depths, such as real-time sharing of digital currency-related data, intelligent investment strategy supply, and digital asset investment escrow.</span>
+                    <div class="btnteam">
+                        <a class="btns" style="margin-right: 75px;" href="book/witee_en.pdf" target="_blank">Download White Paper</a>
+                        <div class="btns" @click="fixFun">Register and get WTE</div>
+                    </div>
+                    <!-- <div class="button" style="display: block;">
+                        <p style="font-family: Exo2-Medium;font-size: 14px;color: #FFFFFF;letter-spacing: 0.5px;text-align: center;margin-bottom: 44px;">
+                            白名单公募即将开始
+                            <span style="color:#34A9FF;margin-left: 15px;"><a href="Alpha.html"   style="text-decoration:none;color:#34A9FF;">详情</a></span>
+                        </p>
+                        <div class="btmR" style="display: flex;">
+                            <div class="tss" style="position: relative;">
+                                <svg width="284px" height="54px" viewBox="0 0 284 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="p1" transform="translate(-818.000000, -8203.000000)">
+                                        <g id="letmekown" transform="translate(258.000000, 7655.000000)">
+                                            <path d="M574,549 L843,549 L843,588 L830,601 L561,601 L561,562 L574,549 Z"
+                                                  id="Shape-Copy" stroke="#34A9FF"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                                <input type="text" v-model="email" placeholder="您的Email" style="left: 0px; position: absolute; top: 0px; width: 100%; height: 100%; background: none; padding: 18px; outline: none;">
+                            </div>
+                            <div class="btns" @click="emailfun" style="margin-left: 20px;cursor: pointer;height: 54px;width: 109px;line-height: 54px;">訂閱
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="ud" style="margin-top:148px;">
+                        <div style="width: 20px;text-align: center;" onclick="next();">
+                            <img src="http://witee.laabit.com/image/mouse@3x.png" alt="" style="width: 14px;margin: 0 auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="title" style="margin-top: 148px;">
+                <div class="bd"></div>
+                <span class="name">What Is WITEE</span>
+            </div>
+            <div id="Home" class="homexg" v-show="navsBol == '1'" style="height:474px;">
+                <div class="left" style="padding-right: 45px;">
+                    <div class="navs">
+                        <span class="act" @click="navsFun('1')">1</span>
+                        <span @click="navsFun('2')">2</span>
+                        <span @click="navsFun('3')">3</span>
+                    </div>
+                    <p style="margin-top:48px;text-align: left;">Decentralized Super Smart Robo-advisor Service</p>
+                    <span class="s" style="margin-top:32px;">
+                        WITEE is developed based on global digital currency transaction data, industrial flow and public opinion big data. WITEE mines, screens, analyzes and organizes intelligent data and builds an intelligent investment information sharing database. WITEE also provides digital currency investors and community co-builders with trustable, readable, usable, serviceable, semi-automated and robo-advisor information services.
+                    </span>
+                </div>
+                <div class="right" style="display: grid;">
+                    <img src="image/img_whatswitee1_robo@3x.png" style="display: inline-block; vertical-align: middle;" alt="">
+                </div>
+            </div>
+            <div id="Home" class="homexg" v-show="navsBol == '2'" style="height:474px;">
+                <div class="left" style="padding-right: 45px;">
+                    <div class="navs">
+                        <span @click="navsFun('1')">1</span>
+                        <span class="act" @click="navsFun('2')">2</span>
+                        <span @click="navsFun('3')">3</span>
+                    </div>
+                    <p style="margin-top:48px;text-align: left;">Digital Currency Strategy Supermarket</p>
+                    <span class="s" style="margin-top:32px;">
+                        WITEE provides a programmable strategy system by building a co-builder open platform. The database provides API services to co-builders. Co-builders can freely and flexibly design and launch trading strategies to WITEE Strategy Supermarket at any time. In addition, other users can customize their own proprietary investment plans according to their own needs.
+                    </span>
+                </div>
+                <div class="right" style="display: grid;">
+                    <img src="image/img_whatswitee2_market.png" style="display: inline-block; vertical-align: middle;" alt="">
+                </div>
+            </div>
+            <div id="Home" class="homexg" v-show="navsBol == '3'" style="height:474px;">
+                <div class="left" style="padding-right: 45px;">
+                    <div class="navs">
+                        <span @click="navsFun('1')">1</span>
+                        <span @click="navsFun('2')">2</span>
+                        <span class="act" @click="navsFun('3')">3</span>
+                    </div>
+                    <p style="margin-top:48px;text-align: left;">Diversified Intelligent Investment Hosting Platform</p>
+                    <span class="s" style="margin-top:32px;">
+                        Benefiting from the accumulation of big data in the blockchain industry and the deep intelligent operation of mining, the intelligent investment strategy and risk control system is born. It has been flexibly applied to insurance, financial management, lending, real estate and other financial fields and traditional industries, and even special events in a more objective and convenient way.Specific to digital asset investment, WITEE provides objective and efficient investment advice and strategies through intelligent analysis of industrial data upchain, and can further realize the automatic management of personal assets for investors through intelligent hosting.
+                    </span>
+                </div>
+                <div class="right" style="display: grid;">
+                    <img src="image/img_whatswitee3_hosting.png" style="display: inline-block; vertical-align: middle;" alt="">
+                </div>
+            </div>
+
+            <div id="title" style="margin-top: 214px;">
+                <div class="bd"></div>
+                <span class="name">What WITEE Can Do</span>
+            </div>
+            <div class="wraps">
+                <div class="cell">
+                    <img src="image/icon_share.png" alt="">
+                    <p>Accurate and Effective Investment Data Sharing</p>
+                    <div>Based on specialized data analysis, we can draw a series of readable and understandable data and pointers that are conducive to investment and trading strategy. We share this data for free forever.</div>
+                </div>
+                <div class="cell">
+                    <img src="image/icon_adv.png" alt="">
+                    <p>Objective and Comprehensive Operational Advice</p>
+                    <div>Robo-advisor advice can integrate the results of various data processing, provide objective analysis conclusions under different conditions, and provide investors with investment advice in different directions in real time.</div>
+                </div>
+                <div class="cell">
+                    <img src="image/icon_market.png" alt="">
+                    <p>Excellent Investment Strategy Supermarket</p>
+                    <div>The strategy supermarket will collect and open various excellent investment strategies for all investors and reduce investment barriers. Investors can weigh their own assets and profit claims to select their own investment strategies.</div>
+                </div>
+                <div class="cell">
+                    <img src="image/icon_openplatform.png" alt="">
+                    <p>Programmable and Open Strategy Platform</p>
+                    <div>Co-builders can easily write personalized and exclusive strategies using the various data we provide.Co-builders can share with strategic supermarkets to allow more people to join your strategy and maximize strategic profits based
+                        on market trends.</div>
+                </div>
+                <div class="cell">
+                    <img src="image/icon_hosting.png" alt="">
+                    <p>Semi-automated Transaction Hosting</p>
+                    <div>Robo-advisor has lightning speed in decision making and execution. It can help investors make accurate, complex, and effective investment decisions in a very short time and execute transactions quickly.</div>
+                </div>
+                <div class="cell">
+                    <img src="image/icon_major.png" alt="">
+                    <p>Highly Intelligent Private Investment Manager</p>
+                    <div>Based on a highly intelligent and fully automated system construction, all investment strategies are intelligently analyzed and income forecast is carried out, and the corresponding investment strategies are selected and executed automatically
+                        for investors in accordance with the characteristics of personal assets.</div>
+                </div>
+            </div>
+
+
+            <div id="title" style="margin-top: 196px;margin-bottom: 0;">
+                <div class="bd"></div>
+                <span class="name">Why Trust WITEE</span>
+            </div>
+            <div id="Home" class="homexg">
+                <div class="left" style="padding-right: 92px;">
+                    <p style="margin-top:48px;margin-bottom:20px;text-align: left;">Multi-dimensional Data Analysis and Processing System</p>
+                    <span class="s" style="font-family: PingFangSC-Regular;font-size: 14px;color: #778592;line-height: 32px;">
+                        We have established an intelligent big data analysis and pointer system to track, analyze, and collate data content, such as global digital currency transactions, public opinion and chain in real time, and perform specialized processing of data.<br>
+                        WTDCAAE - a big data transaction analysis engine and a professional analysis engine for digital currency market data;<br>
+                        WODCAAE, - a public opinion data acquisition and analysis system and a multi-platform and multi-dimensional tactile system; <br>
+                        WDCRME - a digital currency intelligent risk control engine and a digital currency market risk monitoring engine;<br>
+                        WBDMAAE - an intelligent monitoring and analysis engine for chain data, and a monitoring and analysis engine for a set of multi-chain and multi-dimensional chain data;
+                    </span>
+                </div>
+                <div class="right" style="display: grid;">
+                    <img src="image/img_mul_sys.png" style="display: inline-block; vertical-align: middle;" alt="">
+                </div>
+            </div>
+            <div id="Home" class="homexg" style="margin-top:150px;">
+                <div class="left" style="padding-right: 92px;">
+                    <p style="margin-top:48px;margin-bottom:20px;">Artificial Intelligence and Deep Learning</p>
+                    <span class="s" style="font-family: PingFangSC-Regular;font-size: 14px;color: #778592;line-height: 32px;">
+                        Combining artificial intelligence with decentralized supercomputing capabilities, we have achieved significant results in multidimensional data analysis, risk management, and trading strategies.
+                    </span>
+                </div>
+                <div class="right">
+                    <img src="image/img_ai_deeplearning.png" alt="">
+                </div>
+            </div>
+            <div id="Home" class="homexg" style="margin-top:169px;">
+                <div class="left" style="padding-right: 92px;">
+                    <p style="margin-top:48px;margin-bottom:20px;">Risk Management Engine</p>
+                    <span class="s" style="font-family: PingFangSC-Regular;font-size: 14px;color: #778592;line-height: 32px;">
+                        With the WITEE's multi-dimensional data analysis and processing system, our risk management engine can capture and identify potential risks and false information.<br>
+                        WITEE distinguishes bad transactions such as item fraud, price manipulation, insider trading and suspected money laundering in the field of digital currency trading one by one, to guard against the crime of network technology and purify the investment environment of digital assets.
+                    </span>
+                </div>
+                <div class="right">
+                    <img src="image/img_riskcontrol.png" alt="">
+                </div>
+            </div>
+
+            <div id="title" style="margin-top: 196px;margin-bottom: 42px;">
+                <div class="bd"></div>
+                <span class="name">WTE THE TOKEN</span>
+            </div>
+            <div id="Home" class="homexg">
+                <div class="left" style="padding-right: 92px;">
+                    <p style="margin-top:0;margin-bottom:13px;">WITEE WTE</p>
+                    <span class="s" style="font-family: PingFangSC-Regular;font-size: 14px;color: #778592;line-height: 24px;">
+                        WITEE issues WTE tokens based on the Ethernet ERC-20 Standard as WITEE eco-circulation tokens.<br>
+                        As the fuel of WITEE, WTE uses simulation consumption mechanism. For the system running, a series of operational instructions and transaction strategy need to be executed. Each operation instruction needs to consume a specified number of WTE as the transaction driver.
+                    </span>
+                    <p style="margin-top:26px;margin-bottom:44px;">WTEHUB & WTECYCLE</p>
+                    <span class="s" style="font-family: PingFangSC-Regular;font-size: 14px;color: #778592;line-height: 24px;">
+                        We use two sets of decentralized system mechanisms to balance the market price of WTE.<br>
+                        WTEHUB achieves WTE and ETH convertibility and uses WTECYCLE to achieve WTE repurchase and destruction. Refer to the White Paper for more on tokens and mechanisms.
+                    </span>
+                </div>
+                <div class="right">
+                    <img src="image/img_wte_token@2x.png" alt="">
+                </div>
+            </div>
+            <div id="Home" style="align-items: center;justify-content: center;">
+                <div class="btnteam" style="margin-top: 102px;">
+                    <a class="btns" style="margin-right:50px;" href="token_en.html">More information about TOKEN</a>
+                    <div class="btns" @click="play=true">Watch the video to learn more</div>
+                </div>
+            </div>
+
+
+            <div id="title" style="margin-top: 264px;margin-bottom: 0;">
+                <div class="bd"></div>
+                <span class="name" style="text-align:center;">Roadmap</span>
+            </div>
+            <div id="Home" style="padding:0;">
+                <div class="left" style="align-items:center;">
+                    <svg class="pc" width="1440px" height="352px" viewBox="0 0 1440 352" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-15.6%" y="-138.9%" width="131.3%" height="377.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="P1EN" transform="translate(0.000000, -6741.000000)">
+            <g id="roadmap" transform="translate(0.000000, 6645.000000)">
+                <g id="Group-28" transform="translate(0.000000, 218.000000)">
+                    <polygon id="glow" fill="#34A9FF" opacity="0.170000002" filter="url(#filter-1)" points="724.522224 108 1195 42.4824492 724.522224 0 236 54"></polygon>
+                    <text id="Data-Acquisition-Sys" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="168" y="96">Data Acquisition </tspan>
+                        <tspan x="168" y="116">System Development</tspan>
+                    </text>
+                    <text id="Mar-2018" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#34A9FF">
+                        <tspan x="203" y="19">Mar 2018</tspan>
+                    </text>
+                    <text id="Robo-advisor-Product" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="428" y="95">Robo-advisor </tspan>
+                        <tspan x="428" y="115">Product Launch</tspan>
+                    </text>
+                    <text id="Aug-2018" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#34A9FF">
+                        <tspan x="431" y="19">Aug 2018</tspan>
+                    </text>
+                    <text id="Strategy-Engine-Deve" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="650" y="95">Strategy Engine</tspan>
+                        <tspan x="650" y="115">Development</tspan>
+                    </text>
+                    <text id="Mar-2019" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#34A9FF">
+                        <tspan x="665" y="19">Mar 2019</tspan>
+                    </text>
+                    <text id="Strategy-Development" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="859" y="95">Strategy Development </tspan>
+                        <tspan x="859" y="115">Platform Launch</tspan>
+                    </text>
+                    <text id="Mar-2019" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#34A9FF">
+                        <tspan x="896" y="19">Mar 2019</tspan>
+                    </text>
+                    <text id="Multiple-Smart-Manag" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="1094" y="95">Multiple Smart </tspan>
+                        <tspan x="1094" y="115">Manager Development</tspan>
+                    </text>
+                    <text id="Mar-2020" font-family="Exo2-Regular" font-size="17" font-weight="normal" fill="#34A9FF">
+                        <tspan x="1127" y="19">Mar 2020</tspan>
+                    </text>
+                    <g id="timeline" transform="translate(0.000000, 35.000000)">
+                        <path d="M0,12 L1440,12" id="Line-10" stroke="#34A9FF" stroke-width="1.95" stroke-linecap="square"></path>
+                        <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#05020F" cx="243.5" cy="11.5" r="6.5"></circle>
+                        <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#05020F" cx="480.5" cy="11.5" r="6.5"></circle>
+                        <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#05020F" cx="706.5" cy="11.5" r="6.5"></circle>
+                        <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#05020F" cx="933.5" cy="11.5" r="6.5"></circle>
+                        <g id="Group-20" transform="translate(1152.000000, 3.000000)" fill="#05020F" stroke="#FFFFFF" stroke-width="2">
+                            <circle id="Oval-7" cx="8.5" cy="8.5" r="6.5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+                    <svg width="100%" height="495px" viewBox="0 0 297 495" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mobel"><desc>Created with Sketch.</desc> <defs></defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="p1EN_mobile" transform="translate(-33.000000, -1438.000000)"><g id="timeline" transform="translate(40.500000, 1685.500000) rotate(90.000000) translate(-40.500000, -1685.500000) translate(-206.000000, 1679.000000)"><path d="M0,7 L492.065036,7" id="Line-10" stroke="#34A9FF" stroke-width="1.95" stroke-linecap="square"></path> <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#323844" cx="39.5" cy="6.5" r="6.5"></circle> <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#323844" cx="138.75" cy="6.5" r="6.5"></circle> <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#323844" cx="238" cy="6.5" r="6.5"></circle> <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#323844" cx="337.25" cy="6.5" r="6.5"></circle> <g id="Group-20" transform="translate(430.000000, -0.000000)" fill="#323844" stroke="#FFFFFF" stroke-width="2"><circle id="Oval-7" cx="6.5" cy="6.5" r="6.5"></circle></g></g> <text id="Pre-Preparation" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF"><tspan x="56" y="1491">Data Acquisition System Development</tspan></text> <text id="AUG.-2017-Copy" font-family=".AppleSystemUIFont" font-size="17" font-weight="normal" fill="#34A9FF"><tspan x="56" y="1471">Mar 2018</tspan></text> <text id="Infrastructure" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF"><tspan x="56" y="1590">Robo-advisor Product Launch</tspan></text> <text id="MAY.-2018-Copy" font-family=".AppleSystemUIFont" font-size="17" font-weight="normal" fill="#34A9FF"><tspan x="56" y="1569">Aug 2018</tspan></text> <text id="WITEE1.0" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF"><tspan x="56" y="1689">Strategy Engine Development</tspan></text> <text id="AUG.-2018-Copy" font-family=".AppleSystemUIFont" font-size="17" font-weight="normal" fill="#34A9FF"><tspan x="56" y="1668">Mar 2019</tspan></text> <text id="WITEE2.0" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF"><tspan x="56" y="1788">Strategy Development Platform Launch</tspan></text> <text id="NOV.-2018" font-family=".AppleSystemUIFont" font-size="17" font-weight="normal" fill="#34A9FF"><tspan x="56" y="1766">Mar 2019</tspan></text> <text id="Sustainable-Developm" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF"><tspan x="56" y="1888">Multiple Smart Manager Development</tspan></text> <text id="FEB.-2019" font-family=".AppleSystemUIFont" font-size="17" font-weight="normal" fill="#34A9FF"><tspan x="56" y="1865">Mar 2020</tspan></text></g></g></svg>
+                    <a href="roadmap.html" style="text-decoration:none;">
+                        <div class="btns map">SEE DETAILED ROADMAP</div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div id="title" class="homexgs" style="margin-top: 217px;margin-bottom:26px;">
+                <div class="bd"></div>
+                <span class="name" style="text-align:center;">TEAM</span>
+            </div>
+            <div id="Home" class="homes">
+                <div class="left" style="align-items:left;">
+                    <span class="s ts" style="width: 50%;text-align:left;font-family: Exo2-Regular;font-size: 14px;color: #778592;letter-spacing: 0;line-height: 24px;">WITEE has 30 experts in the area of big data, machine learning, blockchain and trading, as well as technical engineers with enterprise-level solution experiences and growth hackers with marketing expertise.</span>
+                    <div class="wrap" style="margin-top:63px;">
+                        <div class="cell active">
+                            <img src="http://witee.laabit.com/image/td/Allen2.png">
+                            <span style="font-size:1rem;margin-top:5px;">Allen Yang (Taiwan)</span>
+                            <span style="font-size:0.6rem;color:#34A9FF;text-transform: uppercase;">WITEE PROJECT SPONSOR</span>
+                            <span class="s" style="line-height:17px;margin-top:5px;">
+                                <span class="ts" style="z-index:9;">Chairman of SunShine Energy Corp; 20 years of experience in marketing management of 5 multinational listed companies:<br>
+                                Foxconn Group (Taiwan)<br>
+                                Volcon Holdings (Singapore)<br>
+                                Jingcheng Technology (Taiwan)<br>
+                                  <br>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="cell">
+
+                            <img src="http://witee.laabit.com/image/td/DavidWang.png">
+                            <span style="font-size:1rem;margin-top:5px;">David Wang</span>
+                            <span style="font-size:0.6rem;color:#34A9FF;text-transform: uppercase;">LEAD DEVELOPER, TRADING STRATEGIES</span>
+                            <span class="s" style="line-height:17px;margin-top:5px;">
+                                <span class="ts" style="z-index:8;">
+                                    Ph.D. in Computer Science, University of Congodia, Canada<br>
+                                    · More than 10 years experience in high frequency trading and quantitative trading platform design<br>
+
+· Proficient in the software and hardware design of trading systems, design of the trading network, and design & implementation of trading strategies<br>
+                                    ·Designed the trading platform covering dozens of stock and futures markets in North America, Europe and Asia.<br>
+                                    <br>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="cell">
+
+                            <img src="http://witee.laabit.com/image/td/UweZimmer.png">
+                            <span style="font-size:1rem;margin-top:5px;">Uwe Zimmer</span>
+                            <span style="font-size:0.6rem;color:#34A9FF;text-transform: uppercase;">FUND MANAGEMENT PARTNER AND ADVISOR</span>
+                            <span class="s" style="line-height:17px;margin-top:5px;">
+                                <span class="ts"  style="z-index:7;">
+                                    With more than 30 years of financial market experience, Uwe is a veteran in the asset management industry. He has build up his vast expertise at Prudential Securities, as a director of Hypo Capital Management and at BB-PrivatFinanz-Service GmbH as well as the founder and CEO of Meridio Asset Management AG. In 2016 he started the Robo Advisor Fundamental Capital and z-invest GmbH which offers digitizing advisory services for the financial industry. Fundamental Capital is a digital asset management company, that creates an artificial intelligence driven, simple and high-performing investment experience for sophisticated customers, who are searching for above average return potential and digital excellence. By using quantitative models and artificial intelligence, Fundamental Capital has proven in the last three years, that it can outperform markets on a consistent basis. With that in mind, Fundamental Capital provides the easiest access to the best investments in the world and by that democratizes technologies that are usually used by hedge funds.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <div class="cell">
+                            <img src="http://witee.laabit.com/image/td/WallaceTang.png">
+                            <span style="font-size:1rem;margin-top:5px;">Wallace Tang</span>
+                            <span style="font-size:0.6rem;color:#34A9FF;text-transform: uppercase;">MARKETING DIRECTOR</span>
+                            <span class="s" style="line-height:17px;margin-top:5px;">
+                                <span class="ts"  style="z-index:6;">
+                                    · Former member of the Foxconn Group-related R& D& Technical Service team
+<br>
+                                    · Served clients such as Apple, Nokia, Sony, etc., and has managed many listed companies for many years<br>
+                                    · Focus on the blockchain for many years; participated in early angel investments <br>
+                                    <br>
+                                    <br>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="cell">
+                            <img src="http://witee.laabit.com/image/td/BORIS.png">
+                            <span style="font-size:1rem;margin-top:5px;">Boris Leong</span>
+                            <span style="font-size:0.6rem;color:#34A9FF;text-transform: uppercase;">MEDIA OPERATIONS OFFICER</span>
+                            <span class="s" style="line-height:17px;margin-top:5px;">
+                                <span class="ts"  style="z-index:5;">
+                                    Bachelor's degree in Digital Media Design, Ming Chuan University<br>
+                                    · Proficient in English/Chinese<br>
+
+· Years of experience in media operations<br>
+
+· Created the Poseidon brand
+<br>
+                                    · Successful media packaging promotion experience for cryptocurrency and blockchain<br>
+                                  <br>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="cell">
+
+                            <img src="http://witee.laabit.com/image/td/ChelseaMillar.png">
+                            <span style="font-size:1rem;margin-top:5px;">Chelsea Millar(Canada)</span>
+                            <span style="font-size:0.6rem;color:#34A9FF;text-transform: uppercase;">Big Data Analyst</span>
+                            <span class="s" style="line-height:17px;margin-top:5px;">
+                                <span class="ts"  style="z-index:4;">
+                                    Simon Fraser University
+Bachelor's degree in Applied and Engineering Sciences<br>
+                                    · Bilingual (English/Chinese) skills<br>
+                                    · Three years' experience in building multinational customer relationships<br>
+                                    · Former partner of Wala Technologies, Vancouver<br>
+                                    · Managing Bitcoin transactions and the Bitcoin mine in Vancouver <br>
+                                  <br>
+                                </span>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="wrap">
+                        <div class="cell">
+                            <img src="http://witee.laabit.com/image/td/zsp.png">
+                            <span style="font-size:1rem;margin-top:5px;">Zhang Shaoying</span>
+                            <span style="font-size:0.6rem;color:#34A9FF;text-transform: uppercase;">PROJECT FINANCIAL ADVISOR</span>
+                            <span class="s" style="line-height:17px;margin-top:5px;">
+                                <span class="ts"  style="z-index:3;">
+                                ·Bachelor's degree in Computer Science of Huaqiao University<br>
+                                · Master's degree in Science (Financial Engineering), National University of Singapore
+Solid knowledge and experience in Oracle database development and Linux/Unix platform
+<br>
+                                · More than 18 years of experience in system design and development 14 years of experience in multinational supply chain solutions<br></span>
+                            </span>
+                        </div>
+                        <div class="cell none">
+                        </div>
+                        <div class="cell none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="title" style="margin-top: 181px;margin-bottom:52px;">
+                <div class="bd"></div>
+                <span class="name" style="text-align:center;">Partners</span>
+            </div>
+            <div id="Home">
+                <div class="wraping">
+                    <div class="celling row">
+                        <img src="image/p1.png" alt="">
+                        <div class="msging">3BIndex.io is a professional cryptocurrency market and public opinion data server provider headquartered in Wall Street, New York City. It tracks effective information generated by the cryptocurrency market in real time and provides
+                            users with professional and reliable index information by using the specific algorithm. In addition to the market index, 3BI fully complies with the characteristics of the digital cryptocurrency with the community as its core
+                            and takes the public opinion as the main reference index product.</div>
+                    </div>
+                    <div class="celling row">
+                        <img src="image/p2.png" style="width: 183px;" alt="">
+                        <div class="msging">IOB llc (IOB) is a limited liability company incorporated in Delaware, United States of America. Focusing on investing in regulated financial, compliance and technology companies, the ONE Finance Network (the Mesh) has created
+                            the world's first multi-jurisdiction-compliant public financial blockchain, which will eliminate commissions on all financial transactions. To help promote international investment standards, IOB is currently preparing its
+                            Interactive Crypto Offerings™ (ICOs) in several countries underscoring its ''STMO '' strategy for its interactive cryptographic products.IOB llc is investing actively in the US, China, Germany, India and the UK and plans to
+                            expand to other global financial centers.IOB llc is investing actively in the US, China, Germany, India and the UK and plans to expand to other global financial centers.</div>
+                    </div>
+                    <div class="celling clm">
+                        <img src="image/p3.png" alt="">
+                        <div class="msging">WTE has issued a total of 1.8 billion tokens, which will never be issued, and are mainly used for: 1. Basestone partner, accounting for 15%; 100-day lockout; WTE number: 270,000,000. 2. Investment institute, accounting for 36%;
+                            WTE number: 648,000,000. 3. Team holding, accounting for 19%; 300-day lockout; WTE number: 342,000,000. 4. White List user holding, accounting for 10%; WTE number: 180,000,000. 5. Community award, accounting for 15%; WTE number:
+                            270,000,000. 7. Project consultants, accounting for 5%; WTE number: 90,000,000.</div>
+                    </div>
+                    <div class="celling clm">
+                        <img src="image/p4.png" alt="">
+                        <div class="msging">Cui Jin Co., Ltd.is a professional investment management institution (IMI) established by senior experts. The company invests in traditional and emerging industries and innovative companies with the adaptation of mature international
+                            capital form and professional investment philosophy and methods. After years of development, it has invested in Hong Kong, Japan, the United States and many European countries.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="title" style="margin-top:196px;margin-bottom: 53px;">
+                <div class="bd"></div>
+                <span class="name" style="text-align:center;">CO-BUILDER</span>
+            </div>
+
+            <div class="gjz">
+                <div class="r1" style="margin-left: 6px;">
+                    <img src="image/img_co_bidata.png" alt="">
+                    <img src="image/img_co_orange.png" alt="">
+                    <img src="image/img_co_gariicmedia.png" alt="">
+                    <img src="image/img_co_youxi.png" alt="">
+                    <img src="image/img_co_biji.png" alt="">
+                    <img src="image/img_co_bixun.png" alt="">
+                    <img src="image/img_co_hello.png" alt="">
+                </div>
+                <div class="r2">
+                    <img src="image/img_co_bgempty.png" alt="">
+
+                    <img src="image/img_co_zhangfu.png" alt="">
+                    <img src="image/img_co_bixiao.png" alt="">
+
+                    <img src="image/img_co_biss.png" alt="">
+                    <img src="image/img_co_qucc.png" alt="">
+                    <img src="image/img_co_hdclub.png" alt="">
+
+                    <img src="image/img_co_coinairdrop.png" alt="">
+                    <img src="image/img_co_bgempty.png" alt="">
+                </div>
+                <div class="r4" style="margin-left: 6px;">
+                    <img src="image/1@3x.png" alt="">
+                    <img src="image/Group 2@1x.png" alt="">
+                    <img src="image/Group@1x.png" alt="">
+                    <img src="image/Group3@1x.png" alt="">
+                    <img src="image/img_co_bgempty.png" alt="">
+                    <img src="image/img_co_bgempty.png" alt="">
+                    <img src="image/img_co_bgempty.png" alt="">
+                </div>
+                <div class="r3">
+                    <img style="opacity:0;" src="image/img_co_bgempty.png" alt="">
+                    <img src="image/img_co_bgempty.png" alt="">
+                    <img src="image/img_co_bgempty.png" alt="">
+                    <img style="opacity:0;" src="image/img_co_bgempty.png" alt="">
+                    <img src="image/img_co_bgempty.png" alt="">
+                    <img style="opacity:0;" src="image/img_co_bgempty.png" alt="">
+                    <img src="image/img_co_bgempty.png" alt="">
+                    <img style="opacity:0;" src="image/img_co_bgempty.png" alt="">
+                </div>
+            </div>
+            <img class="gjrp" src="image/haha1.png" alt="">
+
+
+            <div id="Home" class="footers">
+                <div class="left" style="align-items:center;">
+                    <div class="title" style="margin-top:146px;margin-bottom:102px;">
+                        <div class="bd"></div>
+                        <span class="name" style="text-align:center;">Contact Us</span>
+                    </div>
+                    <div class="pater">
+                        <span class="con">
+                          	<a href="https://m.facebook.com/Witee-394083224388964/" target="_blank"
+                               style="text-decoration:none;">
+                              <img src="http://witee.laabit.com/image/ico_fb@2x.png" class="ts" alt="">
+                              <img src="http://witee.laabit.com/image/ico_fb@2x_active.png" class="ts1" alt="">
+                            </a>
+                        </span>
+                        <span class="con">
+                          	<a href="https://twitter.com/_Witee_" target="_blank" style="text-decoration:none;">
+                              <img src="http://witee.laabit.com/image/ico_twitter@2x.png" class="ts" alt="">
+                              <img src="http://witee.laabit.com/image/ico_blue_twitter@2x_active.png" class="ts1" alt="">
+                             </a>
+                        </span>
+                        <span class="con">
+                          	<a href="https://t.me/joinchat/HxEFeU9-WSRmCBS30redOQ" target="_blank"
+                               style="text-decoration:none;">
+                        	<img src="http://witee.laabit.com/image/ico_telegram@2x.png" class="ts" alt="">
+                          	<img src="http://witee.laabit.com/image/ico_blue_telegram@2x_active.png" class="ts1" alt="">
+                            </a>
+                        </span>
+                        <span class="con">
+                          	<a href="https://github.com/witee-io" target="_blank" style="text-decoration:none;">
+                        	<img src="http://witee.laabit.com/image/ico_github@2x.png" class="ts" alt="">
+                            <img src="http://witee.laabit.com/image/ico_blue_github@2x_active.png" class="ts1" alt="">
+                            </a>
+                        </span>
+                    </div>
+
+                    <div class="btm">
+                        <div class="btmL">Get first-hand information on important development progress and activities on WITEE.</div>
+                        <div class="btmR">
+                            <div class="tss" style="position: relative;">
+                                <svg width="284px" height="54px" viewBox="0 0 284 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="p1" transform="translate(-818.000000, -8203.000000)">
+                                        <g id="letmekown" transform="translate(258.000000, 7655.000000)">
+                                            <path d="M574,549 L843,549 L843,588 L830,601 L561,601 L561,562 L574,549 Z"
+                                                  id="Shape-Copy" stroke="#34A9FF"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                                <input type="text" v-model="email" placeholder="Email here" style="left:0;position: absolute;top: 0;width: 100%;height: 100%;background: none;padding: 18px; outline: none;">
+                            </div>
+                            <div class="btns1" @click="emailfun">Let me Know</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer" style="padding:0 149px; margin-top:281px;">
+                <img src="http://witee.laabit.com/image/logo@3x.png" alt="">
+                <div class="cl">
+                    <span><a href="book/witee_cn.pdf" target="_blank" style="text-decoration:none;">White Paper</a></span>
+                    <span><a href="https://github.com/witee-io" target="_blank" style="text-decoration:none;">GITHUB</a></span>
+                    <span><a href="roadmap.html" style="text-decoration:none;">Roadmap</a></span>
+                    <span><a href="token.html" style="text-decoration:none;">Token</a></span>
+                    <!--<span><a href="ww_en.html">Witee-Weekly</a></span>-->
+                    <!--<span><a href="Alpha.html" style="text-decoration:none;">Alpha</a></span>-->
+                    <!--<span><a href="ico.html"  style="text-decoration:none;">ICO</a></span>-->
+                </div>
+            </div>
+
+            <span class="links" style="padding-left:10%;">© 2018 witee.io</span>
+            <span class="links" style="">support@witee.io</span>
+
+            <div id="popBox" v-if="play">
+                <div class="w-light-box">
+                    <div class="head">
+                        <div class="title"></div>
+                        <div class="num" style="display:none">1/1</div>
+                    </div>
+                    <div class="content" style="height:80%">
+                        <video width="100%" height="100%" controls="controls" autoplay="autoplay" preload="auto">,
+                        <source src="http://witee.laabit.com/video/WITEE_en.mp4" type="video/mp4">
+                        ,
+                        Your browser is not able to play this video for the time being.
+                    </video>
+                    </div>
+                    <div class="control" style="display:none">
+                        <a class="prev" href="javascript:void(0);"></a>
+                        <a class="next" href="javascript:void(0);"></a>
+                    </div>
+                </div>
+                <a class="closeBtn" href="javascript:;" @click="play=false">Close</a>
+            </div>
+            <div id="boxModel" v-if="play"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script/config.js"></script>
+    <script type="text/javascript" src="script/newapp.js"></script>
+    <script type="text/javascript" src="script/vue.js"></script>
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/swiper.min.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                navsBol: '1',
+                email: '',
+                langesta: false,
+                play: false,
+                fixBol: false,
+                youxiang: '',
+                mima: '',
+                dizhi: '',
+                type:false
+            },
+            methods: {
+                langefun: function(val) {
+                    location.href = val;
+                    this.langesta = false;
+                },
+                init: function() {
+
+                    var that = this;
+                    if(h.pageParam().type){
+                        that.type = true;
+                        $("html, body").animate({
+                            scrollTop: $(".homexgs").offset().top - 20 + "px"
+                        }, 500);
+                    }
+
+                    var swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        centeredSlides: true,
+                        initialSlide: 0,
+                        loop: true,
+                        autoplay: {
+                            delay: 2000,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    });
+
+                },
+                logFun: function() {
+                    var that = this;
+
+                    var phone = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+
+                    var jmz = {};
+                    jmz.GetLength = function(str) {
+                        ///<summary>获得字符串实际长度，中文2，英文1</summary>
+                        ///<param name="str">要获得长度的字符串</param>
+                        var realLength = 0,
+                            len = str.length,
+                            charCode = -1;
+                        for (var i = 0; i < len; i++) {
+                            charCode = str.charCodeAt(i);
+                            if (charCode >= 0 && charCode <= 128)
+                                realLength += 1;
+                            else
+                                realLength += 2;
+                        }
+                        return realLength;
+                    };
+                    if (!phone.test(that.youxiang)) {
+                        h.toasttips(1, 'Please fill in the correct mailbox！');
+                        return false;
+                    } else if (jmz.GetLength(that.dizhi) != 42) {
+                        h.toasttips(1, 'The address of the wallet is not correct！');
+                        return false;
+                    } else {
+                        h.ajax(function(ret, err) {
+                            if (ret.state == "0000") {
+                               that.youxiang='';
+                               that.mima='';
+                               that.dizhi='';
+                                setTimeout(function() {
+                                    h.toasttips(0, ret.msg[1]);
+                                    that.fixBol = !that.fixBol;
+                                }, 300);
+                            } else {
+                                setTimeout(function() {
+                                    h.toasttips(1, ret.msg[1]);
+                                }, 300)
+
+                            }
+                        }, "/emailuser/register", "post", {
+                            email: that.youxiang,
+                            password: that.mima,
+                            wallet_address: that.dizhi
+                        });
+                    }
+                },
+                emailfun: function() {
+                    var that = this;
+                    var phone = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+                    if (!phone.test(this.email)) {
+                        h.toasttips(1, 'Your email！');
+                        return false;
+                    }
+                    var showProgress = h.showProgress('Subscribe');
+                    h.ajax(function(ret, err) {
+                        h.hideProgress(showProgress);
+                        if (ret.state == "0000") {
+                            setTimeout(function() {
+                                h.toasttips(0, 'Subscription successful');
+                            }, 300);
+                        } else {
+                            if (ret.msg == '已订阅') {
+                                setTimeout(function() {
+                                    h.toasttips(1, 'Subscribed');
+                                }, 300)
+                            } else {
+                                setTimeout(function() {
+                                    h.toasttips(1, 'Subscription failure');
+                                }, 300)
+                            }
+
+                        }
+                        that.email = '';
+                    }, "subscribe", "post", {
+                        email: this.email
+                    });
+                },
+                fixFun: function() {
+                    this.fixBol = !this.fixBol;
+                    this.youxiang='';
+                    this.mima='';
+                    this.dizhi='';
+                },
+                navsFun: function(ids) {
+                    this.navsBol = ids;
+                },
+            },
+        });
+
+        h.ready();
+    </script>
+    <script>
+        function next() {
+            $("html, body").animate({
+                scrollTop: $(".homexg").offset().top - 20 + "px"
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>

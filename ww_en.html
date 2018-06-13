@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>WITEE</title>
+    <meta itemprop="name" content="witee">
+    <meta name="keywords" content="WTE,WITEE,WITEE.IO,WTEHUB,WTEFUND,WTECYCLE,Robo-advisor,Smart investment,Robo-advisor" />
+    <meta name="description" itemprop="description" content="WITEE conducts big data collection and modeling on the public opinion of the digital cryptocurrency and transaction information, and then conducts deep learning for data model through artificial intelligence. After efficient strategy analysis, WITEE provides a variety of intelligent digital cryptocurrency investment services." />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+    <link rel="shortcut icon" href="https://witee.laabit.com/image/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/index0.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/phone.css" />
+</head>
+
+<style media="screen">
+    .cwraps {
+        padding: 0 149px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .cwraps .cells {
+        width: 240px;
+        height: 312px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: #323844;
+        clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+        margin: 0 22px;
+        margin-bottom: 44px;
+        cursor: pointer;
+    }
+
+    .cwraps .cells .ctitles {
+        font-family: Exo2-MediumItalic;
+        font-size: 32px;
+        color: #FFFFFF;
+        letter-spacing: 5.33px;
+        text-align: center;
+    }
+
+    .cwraps .cells .ctimes {
+        display: inline-block;
+        font-family: Exo2-Italic;
+        font-size: 18px;
+        color: #34A9FF;
+        letter-spacing: 3px;
+        text-align: center;
+        padding: 0 10px;
+        width: 80%;
+    }
+
+    .ww {
+        width: 873px;
+        height: 842px;
+        background: #242A34;
+        box-shadow: 12px 12px 22px 0 rgba(0, 0, 0, 0.50);
+        position: absolute;
+        left: 50%;
+        top: 308px;
+        padding-top: 30px;
+        padding-left: 80px;
+        padding-right: 50px;
+        z-index: 10;
+        margin-left: -437px;
+    }
+
+    .wname {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 1.62px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
+        margin-top: 18px;
+    }
+
+    .wtime {
+        margin-top: 11px;
+    }
+
+    .wtime span {
+        margin-right: 20px;
+        font-family: Exo2-Medium;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 1.6px;
+    }
+
+    .wctn {
+           box-shadow: 2px 2px 3px 0 #000000;
+          padding: 1px;
+          clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+          background: rgba(119,133,146,0.6);
+      margin-bottom:20px;
+    }
+
+    .wrow {
+      background: #242A34;
+    padding: 20px 24px;
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+        margin-bottom: 32px;
+    }
+
+    .wrow:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+
+    .wtit {
+        font-family: PingFangSC-Medium;
+        font-size: 14px;
+        color: #ffffff;
+        letter-spacing: 0;
+        line-height: 17px;
+    }
+
+    .wmsg {
+        margin-top: 8px;
+        font-family: Exo2-Medium;
+        font-size: 14px;
+        color: #778592;
+        letter-spacing: 0;
+    }
+
+    .ww .clss {
+        position: absolute;
+        right: 20px;
+        top: 19px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    .wtype {
+        font-family: PingFangSC-Medium;
+        font-size: 14px;
+        color: #34A9FF;
+        letter-spacing: 0;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+        margin-bottom: 7px;
+        padding-left: 20px;
+    }
+
+    .wscr {
+        height: 635px;
+        overflow: scroll;
+        padding-right: 30px;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .wcell {
+        margin-bottom: 30px;
+    }
+</style>
+
+<body>
+
+    <div id="app" v-cloak>
+
+        <a class="btops" href="#one"><img src="image/ttop.png" alt=""></a>
+
+        <!-- bg -->
+        <img class="bgs bgm" src="image/bg_oval.png" alt="">
+        <img class="bgs bg1" src="image/bg_shape_top_right.png" alt="">
+        <img class="bgs bg2" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg3" src="image/bg_shapes.png" alt="">
+        <!-- <img class="bgs bg4" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg5" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg6" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg7" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg8" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg9" src="image/bg_shapes.png" alt=""> -->
+
+        <div class="ups">
+
+            <div class="ww" v-show="wcls">
+                <img @click="wclsFun" class="clss" src="image/icon_close.png" alt="">
+                <img style="width: 130px;" src="http://witee.laabit.com/image/logo@3x.png" alt="">
+                <p class="wname">数字货币可编程策略市场</p>
+                <div class="wtime">
+                    <span>Witee-weekly</span><span>{{tims}}</span>
+                </div>
+                <div class="wscr">
+
+                    <div class="wcell" v-for="dtl in dtls">
+                        <!--<p class="wtype">{{dtl.nickname}}</p>-->
+                        <div class="wctn" v-for="val in dtl.weekly">
+                            <div class="wrow">
+                                <span class="wtit">{{val.en_title}}</span>
+                                <div class="wmsg" v-html="val.en_content">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="fixs" v-show="fixBol">
+                <img @click="fixFun" class="clss" src="image/icon_close.png" alt="">
+                <p class="row1">Register as a WITEE member and receive WTE awards after WITEE is officially launched.<br>Limited quantity on a first-come-first-served basis.</p>
+                <p class="row2">WITEE will introduce KYC certification. Do not use multiple mailboxes and wallet addresses to register and receive rewards.</p>
+                <input type="text" v-model="youxiang" name="" value="" placeholder="E-mail">
+                <input type="text" v-model="mima" name="" value="" placeholder="Login password">
+                <input type="text" v-model="dizhi" name="" value="" placeholder="Wallet address">
+                <div class="btns1" @click="logFun" style="margin-left:0;">Register</div>
+            </div>
+            <div class="header" id="one">
+                <div class="HLeft">
+                    <a href="index.html"><img src="http://witee.laabit.com/image/logo@3x.png" alt=""></a>
+                </div>
+                <div class="HRight">
+                    <span><a href="index_en.html">Home</a ></span>
+                    <span><a href="index_en.html?type=tdjs">Team</a ></span>
+                    <span><a href="news_en.html">News</a></span>
+                    <span><a href="roadmap_en.html">Roadmap</a></span>
+                    <span><a href="token_en.html">TOKEN</a></span>
+                    <span class="active" style="width: 163px;"><a href="ww_en.html">Witee-Weekly</a></span>
+                    <span style="width: 144px;"><a href="book/witee_en.pdf" target="_blank">WHITE PAPER</a></span>
+                    <span @click="fixFun"><a>Log in</a></span>
+                    <!--<span><a href="ico.html">ico</a></span>-->
+                    <div class="lan">
+                        <img src="http://witee.laabit.com/image/en.png" alt="">
+                        <div class="lange">
+                            <p @click="langesta = true">
+                                EN
+                            </p>
+                            <div class="langebox" v-if="langesta">
+                                <span @click="langefun('ww.html')"><i>&radic;</i>CHT</span>
+                                <span class="active" @click="langefun('ww_en.html')"><i>&radic;</i>EN</span>
+                            </div>
+                        </div>
+                        <img src="http://witee.laabit.com/image/down.png" style="cursor: pointer;" @click="langesta = true" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="title" style="margin-top: 172px;">
+                <div class="bd"></div>
+                <span class="name">New</span>
+            </div>
+            <div class="cwraps" >
+
+                <div class="cells" @click="wclsFun(news.id,news.nickname)">
+                    <span class="ctitles"  style="margin-top: 80px;">WITEE</span>
+                    <span class="ctitles" >WEEKLY</span>
+                    <span class="ctimes"  style="margin-top: 58px;">{{news.nickname}}</span>
+                </div>
+
+            </div>
+
+
+            <div id="title" style="margin-top: 172px;">
+                <div class="bd"></div>
+                <span class="name">WITEE - WEEKLY HIstory</span>
+            </div>
+            <div class="cwraps">
+
+                <div class="cells" @click="wclsFun(val.id,val.nickname)" v-for="val in lists">
+                    <span class="ctitles" style="margin-top: 80px;">WITEE</span>
+                    <span class="ctitles">WEEKLY</span>
+                    <span class="ctimes" style="margin-top: 58px;">{{val.nickname}}</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script/config.js"></script>
+    <script type="text/javascript" src="script/newapp.js"></script>
+    <script type="text/javascript" src="script/vue.js"></script>
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/swiper.min.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                navsBol: '1',
+                langesta: false,
+                fixBol: false,
+                wcls: false,
+                youxiang: '',
+                mima: '',
+                dizhi: '',
+                lists: [],
+                news: {},
+                dtls: {},
+                tims: ''
+            },
+            methods: {
+                langefun: function(val) {
+                    location.href = val;
+                    this.langesta = false;
+                },
+                wclsFun: function(ids,tm) {
+                    var that = this;
+                    that.wcls = !that.wcls;
+                    that.tims = tm;
+                    // 周报
+                    h.ajax(function(ret, err) {
+                        if (ret.state == "0000") {
+                            that.dtls = ret.data;
+                        } else {
+
+                        }
+                    }, "/weekly/lists", "post", {
+                        weekly_date_id: ids
+                    });
+
+                },
+                fixFun: function() {
+                    this.fixBol = !this.fixBol;
+                    this.youxiang='';
+                    this.mima='';
+                    this.dizhi='';
+                },
+                init: function() {
+                    var that= this;
+                    // 日期
+                    h.ajax(function(ret, err) {
+                        if (ret.state == "0000") {
+                            var arr = [];
+                            for (var i = 0; i < ret.data.length; i++) {
+                                if (i == '0') {
+                                    that.news = ret.data[i]
+                                } else {
+                                    arr.push(ret.data[i]);
+                                }
+                            }
+                            that.lists = arr;
+                        } else {
+
+                        }
+                    }, "/category", "post", {
+                        type: 'weekly_date'
+                    });
+                },
+                logFun: function() {
+                    var that = this;
+
+                    var phone = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+
+                    var jmz = {};
+                    jmz.GetLength = function(str) {
+                        ///<summary>获得字符串实际长度，中文2，英文1</summary>
+                        ///<param name="str">要获得长度的字符串</param>
+                        var realLength = 0, len = str.length, charCode = -1;
+                        for (var i = 0; i < len; i++) {
+                            charCode = str.charCodeAt(i);
+                            if (charCode >= 0 && charCode <= 128)
+                                realLength += 1;
+                            else
+                                realLength += 2;
+                        }
+                        return realLength;
+                    };
+                    if (!phone.test(that.youxiang)) {
+                        h.toasttips(1, 'Please fill in the correct mailbox！');
+                        return false;
+                    } else if (jmz.GetLength(that.dizhi) != 42) {
+                        h.toasttips(1, 'The address of the wallet is not correct！');
+                        return false;
+                    } else {
+                        h.ajax(function(ret, err) {
+                            if (ret.state == "0000") {
+                              that.youxiang='';
+                               that.mima='';
+                               that.dizhi='';
+                                setTimeout(function () {
+                                    h.toasttips(0, ret.msg[1]);
+                                    that.fixBol = !that.fixBol;
+                                }, 300);
+                            } else {
+                                setTimeout(function () {
+                                    h.toasttips(1, ret.msg[1]);
+                                }, 300)
+
+                            }
+                        }, "/emailuser/register", "post", {
+                            email: that.youxiang,
+                            password: that.mima,
+                            wallet_address:that.dizhi
+                        });
+                    }
+                },
+            },
+        });
+
+        h.ready();
+    </script>
+</body>
+
+</html>

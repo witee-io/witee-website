@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>WITEE</title>
+    <meta itemprop="name" content="witee">
+    <meta name="keywords" content="WTE,WITEE,WITEE.IO,WTEHUB,WTEFUND,WTECYCLE,Robo-advisor,Smart investment,Robo-advisor" />
+    <meta name="description" itemprop="description" content="WITEE conducts big data collection and modeling on the public opinion of the digital cryptocurrency and transaction information, and then conducts deep learning for data model through artificial intelligence. After efficient strategy analysis, WITEE provides a variety of intelligent digital cryptocurrency investment services." />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+    <link rel="shortcut icon" href="https://witee.laabit.com/image/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/index0.css" />
+    <link rel="stylesheet" type="text/css" href="css/phone.css" />
+    <style>
+        .tits {
+            align-self: flex-start;
+            margin-left: 80px;
+            margin-bottom: 40px;
+            font-family: PingFangSC-Medium;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <a class="btops" href="#one"><img src="image/ttop.png" alt=""></a>
+
+        <!-- bg -->
+        <img class="bgs bgm" src="image/bg_oval.png" alt="">
+        <img class="bgs bg1" src="image/bg_shape_top_right.png" alt="">
+        <img class="bgs bg2" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg3" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg4" src="image/bg_shapes.png" alt="">
+        <!-- <img class="bgs bg5" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg6" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg7" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg8" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg9" src="image/bg_shapes.png" alt=""> -->
+        <div class="ups">
+            <div class="fixs" v-show="fixBol">
+                <img @click="fixFun" class="clss" src="image/icon_close.png" alt="">
+                <p class="row1">Register as a WITEE member and receive WTE awards after WITEE is officially launched.<br>Limited quantity on a first-come-first-served basis.</p>
+                <p class="row2">WITEE will introduce KYC certification. Do not use multiple mailboxes and wallet addresses to register and receive rewards.</p>
+                <input type="text" v-model="youxiang" name="" value="" placeholder="E-mail">
+                <input type="text" v-model="mima" name="" value="" placeholder="Login password">
+                <input type="text" v-model="dizhi" name="" value="" placeholder="Wallet address">
+                <div class="btns1" @click="logFun" style="margin-left:0;">Register</div>
+            </div>
+            <div class="header" id="one">
+                <div class="HLeft">
+                    <a href="index.html"><img src="http://witee.laabit.com/image/logo@3x.png" alt=""></a>
+                </div>
+                <div class="HRight">
+                    <span><a href="index_en.html">Home</a ></span>
+                    <span><a href="index_en.html?type=tdjs">Team</a ></span>
+                    <span><a href="news_en.html">News</a></span>
+                    <span><a href="roadmap_en.html">Roadmap</a></span>
+                    <span class="active"><a href="token_en.html">TOKEN</a></span>
+                    <span style="width: 163px;"><a href="ww_en.html">Witee-Weekly</a></span>
+                    <span style="width: 144px;"><a href="book/witee_en.pdf" target="_blank">WHITE PAPER</a></span>
+                    <span @click="fixFun"><a>Log in</a></span>
+                    <!--<span><a href="ico.html">ico</a></span>-->
+                    <div class="lan">
+                        <img src="http://witee.laabit.com/image/en.png" alt="">
+                        <div class="lange">
+                            <p @click="langesta = true">
+                                EN
+                            </p>
+                            <div class="langebox" v-if="langesta">
+                                <span @click="langefun('token.html')"><i>&radic;</i>CHT</span>
+                                <span class="active" @click="langefun('token_en.html')"><i>&radic;</i>EN</span>
+                            </div>
+                        </div>
+                        <img src="http://witee.laabit.com/image/down.png" style="cursor: pointer;" @click="langesta = true" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Home" class="token" style="height: 100vh;margin-top: 34px !important;">
+                <div class="left" style="align-items:center;">
+
+                    <img src="http://witee.laabit.com/image/logos.png" class="logos">
+
+                    <p style="font-size:1.5rem;">WITEE Token</p>
+                    <span class="s" style="margin-top:40px;width:75%;text-align:center;">WITEE issues WTE tokens based on the ETH ERC-20 standard, and serves as WITEE ecological circulation token. WTE will be <br/>used for WITEE DAPP combustion, digital currency exchange, co-builder reward, etc.</span>
+                </div>
+            </div>
+
+            <div id="Home" class="token" style="align-items:flex-start;margin-top: 50px">
+                <div class="right">
+                    <p class="tits">Scope of application</p>
+
+                    <svg width="372px" height="372px" viewBox="0 0 372 372" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="P3tokenEN" transform="translate(-188.000000, -1013.000000)">
+                                <g id="Group-18" transform="translate(188.000000, 1013.000000)">
+                                    <g id="Group-15" transform="translate(1.000000, 0.000000)">
+                                        <rect id="Rectangle-7" stroke="#34A9FF" stroke-width="2" x="22" y="84" width="331" height="220"></rect>
+                                        <rect id="Rectangle-7" fill="#34A9FF" opacity="0.128849638" x="31" y="93" width="313" height="202"></rect>
+                                        <g id="Group-8" opacity="0.271682518" transform="translate(59.000000, 0.000000)" stroke="#34A9FF" stroke-linecap="square">
+                                            <path d="M1.5,0.5 L1.5,370.76477" id="Line"></path>
+                                            <path d="M51.5,0.5 L51.5,370.76477" id="Line"></path>
+                                            <path d="M101.5,0.5 L101.5,370.76477" id="Line"></path>
+                                            <path d="M151.5,0.5 L151.5,370.76477" id="Line"></path>
+                                            <path d="M201.5,0.5 L201.5,370.76477" id="Line"></path>
+                                            <path d="M251.5,0.5 L251.5,370.76477" id="Line"></path>
+                                        </g>
+                                        <g id="Group-8" opacity="0.271682518" transform="translate(185.500000, 191.500000) rotate(90.000000) translate(-185.500000, -191.500000) translate(59.000000, 6.000000)" stroke="#34A9FF" stroke-linecap="square">
+                                            <path d="M1.5,0.5 L1.5,370.76477" id="Line"></path>
+                                            <path d="M51.5,0.5 L51.5,370.76477" id="Line"></path>
+                                            <path d="M101.5,0.5 L101.5,370.76477" id="Line"></path>
+                                            <path d="M151.5,0.5 L151.5,370.76477" id="Line"></path>
+                                            <path d="M201.5,0.5 L201.5,370.76477" id="Line"></path>
+                                            <path d="M251.5,0.5 L251.5,370.76477" id="Line"></path>
+                                        </g>
+                                        <g id="Group-9" transform="translate(119.000000, 128.000000)" fill="#FFFFFF">
+                                            <path d="M66.8888889,124.222222 C97.4836726,124.222222 124.222222,97.4836726 124.222222,66.8888889 C124.222222,32.2213671 98.1477895,4.77777778 66.8888889,4.77777778 C31.5163274,4.77777778 4.77777778,31.5163274 4.77777778,66.8888889 C4.77777778,98.1477895 32.2213671,124.222222 66.8888889,124.222222 Z M66.8888889,129 C28.8776336,129 0,100.122366 0,66.8888889 C0,28.8776336 28.8776336,0 66.8888889,0 C100.122366,0 129,28.8776336 129,66.8888889 C129,100.122366 100.122366,129 66.8888889,129 Z" id="Shape" fill-rule="nonzero"></path>
+                                            <path d="M81.9798995,95 L79.0201005,95 L67.7261307,58.5428571 L67.7261307,58.3857143 C67.5184244,57.8095209 67.1679254,57.3380971 66.6746231,56.9714286 C66.1813208,56.6047601 65.6231187,56.4214286 65,56.4214286 C64.3249547,56.4214286 63.7407897,56.6178552 63.2474874,57.0107143 C62.7541851,57.4035734 62.4036861,57.8880924 62.1959799,58.4642857 L60.4045226,64.2785714 L57.5226131,64.2785714 L65,40 L81.9798995,95 Z M88.5226131,64.2785714 L85.5628141,64.2785714 L93.040201,40 L96,40 L88.5226131,64.2785714 Z M53.861809,95 L50.9798995,95 L34,40 L36.959799,40 L53.861809,95 Z" id="W" stroke="#FFFFFF" stroke-width="6"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="left" style="padding-top:60px;">
+                    <span class="s">
+                        WTE will be used for WITEE DAPP combustion（such as Robo-Advisor）, digital currency exchange, co-builder reward, etc.<br/>
+                        1. WTE first served as a necessary fuel for Robo-Advisor operations.Robo-Advisor adopts the simulation consumption mechanism. When the system runs, it needs to execute a series of operation instructions and transaction strategies. Each operation instruction needs to consume a specified number of WTE as the driver of the transaction.<br/>
+                        2. At the same time, WTE also acts as a hedge fund for the fund system. Users use digital money to purchase fund products, and the originator of the fund makes use of the fund to earn digital assets, which consumes WTE as fuel.<br/>
+                        3. WITEE develops basic services, and Co-buliders can develop WITEE applets by accessing WITEE open services. The WTE consumed by the WITEE applet will be rewarded to Co-builders by WTEFUND.<br/>
+                        4. In the WITEE core functions, users can use WTEHUB to invest ETH, in order to obtain WTE. It is also possible to invest WTE in WTECYCLE to obtain ETH (WTE invested in WTECYCLE will be permanently destroyed)
+                    </span>
+                </div>
+            </div>
+
+            <div id="Home" class="token" style="align-items:flex-start;">
+                <div class="right">
+                    <p class="tits">Acquisition method and currency earnings</p>
+
+                    <svg width="439px" height="239px" viewBox="0 0 439 239" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="P3tokenEN" transform="translate(-149.000000, -1896.000000)">
+                                <g id="Group-19" transform="translate(144.000000, 1892.000000)">
+                                    <g id="Illustration" transform="translate(5.000000, 4.000000)">
+                                        <g id="Opacity" opacity="0.149999991" transform="translate(350.000000, 154.000000)" fill="#34A9FF">
+                                            <circle id="Shape" cx="34.5" cy="34.5" r="34.5"></circle>
+                                        </g>
+                                        <g id="Opacity" opacity="0.149999991" transform="translate(62.000000, 10.000000)" fill="#34A9FF">
+                                            <polygon id="Shape" points="0 0 314 0 314 185 0 185"></polygon>
+                                        </g>
+                                        <g id="Base" fill="#34A9FF" fill-rule="nonzero">
+                                            <polygon id="Shape" points="0 239 438.207581 239 438.207581 237.417219 0 237.417219"></polygon>
+                                            <polygon id="Shape" points="152.144404 231.086093 353.429063 231.086093 353.429063 229.503311 152.144404 229.503311"></polygon>
+                                            <path d="M349.456679,1.58278146 L349.456679,0 L52.299639,0 L52.299639,110.003311 L53.8844765,110.003311 L53.8844765,1.58278146 L349.456679,1.58278146 Z M383.530686,135.327815 L385.115523,135.327815 L385.115523,0 L313.005415,0 L313.005415,1.58278146 L383.530686,1.58278146 L383.530686,135.327815 Z M332.815884,202.596026 L128.371841,202.596026 L128.371841,204.178808 L332.815884,204.178808 L332.815884,202.596026 Z" id="Shape"></path>
+                                            <path d="M384.323105,231.086093 C360.25286,231.086093 340.740072,211.598619 340.740072,187.559603 C340.740072,163.520586 360.25286,144.033113 384.323105,144.033113 C408.393349,144.033113 427.906137,163.520586 427.906137,187.559603 C427.906137,211.598619 408.393349,231.086093 384.323105,231.086093 Z M384.323105,229.503311 C407.518067,229.503311 426.3213,210.724473 426.3213,187.559603 C426.3213,164.394732 407.518067,145.615894 384.323105,145.615894 C361.128142,145.615894 342.32491,164.394732 342.32491,187.559603 C342.32491,210.724473 361.128142,229.503311 384.323105,229.503311 Z" id="Shape"></path>
+                                            <path d="M380.159226,191.718079 L396.382171,199.819028 L386.918787,184.967288 L372.047754,175.516181 L380.159226,191.718079 Z M387.91821,183.726374 L388.161313,183.969161 L400.791114,203.790243 L378.977958,192.897815 L368.07138,171.112958 L387.91821,183.726374 Z" id="Shape"></path>
+                                            <path d="M383.530686,149.572848 L383.530686,155.112583 L385.115523,155.112583 L385.115523,149.572848 L383.530686,149.572848 Z M402.640059,154.751296 L399.746008,159.757436 L401.118517,160.548827 L404.012568,155.542686 L402.640059,154.751296 Z M417.424741,167.728405 L412.412097,170.618702 L413.204516,171.989431 L418.21716,169.099134 L417.424741,167.728405 Z M422.63483,186.837029 L416.846727,186.837029 L416.846727,188.41981 L422.63483,188.41981 L422.63483,186.837029 Z M418.21716,205.852793 L413.204516,202.962497 L412.412097,204.333226 L417.424741,207.223522 L418.21716,205.852793 Z M404.012568,220.618295 L401.118517,215.612154 L399.746008,216.403545 L402.640059,221.409685 L404.012568,220.618295 Z M385.184429,225.821624 L385.184429,220.041031 L383.599592,220.041031 L383.599592,225.821624 L385.184429,225.821624 Z M365.838655,221.409685 L368.732706,216.403545 L367.360197,215.612154 L364.466146,220.618295 L365.838655,221.409685 Z M352.264597,207.223522 L357.277241,204.333226 L356.484822,202.962497 L351.472179,205.852793 L352.264597,207.223522 Z M346.287004,188.41981 L352.075106,188.41981 L352.075106,186.837029 L346.287004,186.837029 L346.287004,188.41981 Z M351.472179,169.099134 L356.484822,171.989431 L357.277241,170.618702 L352.264597,167.728405 L351.472179,169.099134 Z M364.466146,155.542686 L367.360197,160.548827 L368.732706,159.757436 L365.838655,154.751296 L364.466146,155.542686 Z" id="Shape"></path>
+                                            <path d="M14.2635379,161.443709 L133.126354,161.443709 L133.126354,144.033113 L14.2635379,144.033113 L14.2635379,161.443709 Z M134.711191,142.450331 L134.711191,163.02649 L12.6787004,163.02649 L12.6787004,142.450331 L134.711191,142.450331 Z" id="Shape"></path>
+                                            <path d="M24.1165187,142.450331 L123.273373,142.450331 L73.6949458,110.941354 L24.1165187,142.450331 Z M128.715797,144.033113 L18.674095,144.033113 L73.6949458,109.065268 L128.715797,144.033113 Z" id="Shape"></path>
+                                            <path d="M28.5270758,210.509934 L42.7906137,210.509934 L42.7906137,163.02649 L28.5270758,163.02649 L28.5270758,210.509934 Z M44.3754513,161.443709 L44.3754513,212.092715 L26.9422383,212.092715 L26.9422383,161.443709 L44.3754513,161.443709 Z" id="Shape"></path>
+                                            <path d="M53.8844765,210.509934 L68.1480144,210.509934 L68.1480144,163.02649 L53.8844765,163.02649 L53.8844765,210.509934 Z M69.732852,161.443709 L69.732852,212.092715 L52.299639,212.092715 L52.299639,161.443709 L69.732852,161.443709 Z" id="Shape"></path>
+                                            <path d="M79.2418773,210.509934 L93.5054152,210.509934 L93.5054152,163.02649 L79.2418773,163.02649 L79.2418773,210.509934 Z M95.0902527,161.443709 L95.0902527,212.092715 L77.6570397,212.092715 L77.6570397,161.443709 L95.0902527,161.443709 Z" id="Shape"></path>
+                                            <path d="M104.599278,210.509934 L118.862816,210.509934 L118.862816,163.02649 L104.599278,163.02649 L104.599278,210.509934 Z M120.447653,161.443709 L120.447653,212.092715 L103.01444,212.092715 L103.01444,161.443709 L120.447653,161.443709 Z" id="Shape"></path>
+                                            <path d="M142.635379,220.006623 L142.635379,231.086093 L4.75451264,231.086093 L4.75451264,220.006623 L12.6787004,220.006623 L12.6787004,210.509934 L134.711191,210.509934 L134.711191,220.006623 L142.635379,220.006623 Z M133.126354,221.589404 L133.126354,212.092715 L14.2635379,212.092715 L14.2635379,221.589404 L6.33935018,221.589404 L6.33935018,229.503311 L141.050542,229.503311 L141.050542,221.589404 L133.126354,221.589404 Z" id="Shape"></path>
+                                        </g>
+                                        <g id="Color" transform="translate(63.000000, 60.000000)">
+                                            <path d="M10.6704545,74.292517 C7.72388989,74.292517 5.33522727,71.898611 5.33522727,68.9455782 C5.33522727,65.9925455 7.72388989,63.5986395 10.6704545,63.5986395 C13.6170192,63.5986395 16.0056818,65.9925455 16.0056818,68.9455782 C16.0056818,71.898611 13.6170192,74.292517 10.6704545,74.292517 Z M10.6704545,72.7648202 C12.7751436,72.7648202 14.4813312,71.0548873 14.4813312,68.9455782 C14.4813312,66.8362691 12.7751436,65.1263362 10.6704545,65.1263362 C8.5657655,65.1263362 6.85957792,66.8362691 6.85957792,68.9455782 C6.85957792,71.0548873 8.5657655,72.7648202 10.6704545,72.7648202 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                            <polygon id="Shape" fill="#34A9FF" opacity="0.274513134" points="8.20408783 69.7172261 17.1540018 83.5058942 29.0872205 83.5058942 45.4953962 95.8431234 57.4286148 82.6263076 76.074269 65.9234068 93.2282708 65.9234068 102.178185 49.7403611 125.298796 49.7403611 140.215319 14.1996944 156.5 14.1996944 176.760801 3 208.0855 3 230.740475 24.8901665 245.211458 24.8901665 275.288246 0.257193695 313 0.257193695 313 133.975805 0 133.975805 0 64.4833234"></polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="left" style="padding-top:60px;">
+                    <span class="s">
+                       You can get WTE tokens from a variety of sources.<br/>
+                        1. Trading at an exchange that supports WTE token exchange<br/>
+                        2. Private equity access to the corresponding token<br/>
+                        3. Join the WITEE co-builder community, won the co-founder fund awards WTE<br/>
+                        4. Use ETH to redeem in WTEHUB to get the corresponding amount of WTE<br/>
+                        5 Other ways<br/>
+
+                        The WTE ecosystem has a repurchase contract, and provides a deflationary mechanism, which will achieve value improvement itself.<br/>
+                        1. Users can get higher returns in WTEHUB and WTECYCLE.<br/>
+                        2. WTE is a circulation rigid need of the WITEE platform. As WITEE users increase, WTE's demand will increase and the value will gradually increase.<br/>
+                        3. With the repurchase and destruction of WTE, the WTE circulated in the market will decrease, and the value will gradually increase.
+
+                    </span>
+                </div>
+            </div>
+
+            <div id="Home" class="token" style="align-items:flex-start;">
+                <div class="right">
+                    <p class="tits">Issuance</p>
+
+
+                    <svg width="352px" height="352px" viewBox="0 0 352 352" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+        <desc>Created with Sketch.</desc>
+        <defs>
+            <circle id="path-1" cx="174" cy="174" r="174"></circle>
+            <path d="M174,348 C270.097546,348 348,270.097546 348,174 C348,77.9024535 270.097546,1.8189894e-12 174,1.8189894e-12 C77.9024535,1.8189894e-12 9.09494702e-13,77.9024535 9.09494702e-13,174 C9.09494702e-13,270.097546 77.9024535,348 174,348 Z" id="path-3"></path>
+            <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="348" height="348" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <path d="M174,348 C270.097546,348 348,270.097546 348,174 C348,77.9024535 270.097546,1.8189894e-12 174,1.8189894e-12 C77.9024535,1.8189894e-12 9.09494702e-13,77.9024535 9.09494702e-13,174 C9.09494702e-13,270.097546 77.9024535,348 174,348 Z" id="path-5"></path>
+            <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="348" height="348" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <path d="M174,348 C270.097546,348 348,270.097546 348,174 C348,77.9024535 270.097546,1.8189894e-12 174,1.8189894e-12 C77.9024535,1.8189894e-12 9.09494702e-13,77.9024535 9.09494702e-13,174 C9.09494702e-13,270.097546 77.9024535,348 174,348 Z" id="path-7"></path>
+            <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="348" height="348" fill="white">
+                <use xlink:href="#path-7"></use>
+            </mask>
+            <path d="M174,348 C270.097546,348 348,270.097546 348,174 C348,77.9024535 270.097546,1.8189894e-12 174,1.8189894e-12 C77.9024535,1.8189894e-12 9.09494702e-13,77.9024535 9.09494702e-13,174 C9.09494702e-13,270.097546 77.9024535,348 174,348 Z" id="path-9"></path>
+            <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="348" height="348" fill="white">
+                <use xlink:href="#path-9"></use>
+            </mask>
+            <path d="M174,348 C270.097546,348 348,270.097546 348,174 C348,77.9024535 270.097546,1.8189894e-12 174,1.8189894e-12 C77.9024535,1.8189894e-12 9.09494702e-13,77.9024535 9.09494702e-13,174 C9.09494702e-13,270.097546 77.9024535,348 174,348 Z" id="path-11"></path>
+            <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="348" height="348" fill="white">
+                <use xlink:href="#path-11"></use>
+            </mask>
+            <path d="M174,348 C270.097546,348 348,270.097546 348,174 C348,77.9024535 270.097546,1.8189894e-12 174,1.8189894e-12 C77.9024535,1.8189894e-12 9.09494702e-13,77.9024535 9.09494702e-13,174 C9.09494702e-13,270.097546 77.9024535,348 174,348 Z" id="path-13"></path>
+            <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="348" height="348" fill="white">
+                <use xlink:href="#path-13"></use>
+            </mask>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="P3tokenEN" transform="translate(-205.000000, -2616.000000)">
+                <g id="Group-20" transform="translate(200.000000, 2611.000000)">
+                    <g id="img_token3" transform="translate(7.000000, 7.000000)">
+                        <g id="Group-13">
+                            <g id="6-Slices-Pie-Chart">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <circle stroke="#34A9FF" stroke-width="2" cx="174" cy="174" r="175"></circle>
+                                <g id="#34A9FF:36%" opacity="0.200000003" stroke-dasharray="393.7371428571429,1740" mask="url(#mask-2)">
+                                    <use stroke="#979797" stroke-width="1" xlink:href="#path-3"></use>
+                                    <use stroke="#34A9FF" mask="url(#mask-4)" stroke-width="348" xlink:href="#path-3"></use>
+                                </g>
+                                <g id="#34A9FF:15%" opacity="0.699999988" stroke-dasharray="164.0571428571428,1740" mask="url(#mask-2)" transform="translate(174.000000, 174.000000) rotate(-129.600000) translate(-174.000000, -174.000000) ">
+                                    <use stroke="#979797" stroke-width="1" xlink:href="#path-5"></use>
+                                    <use stroke="#34A9FF" mask="url(#mask-6)" stroke-width="348" xlink:href="#path-5"></use>
+                                </g>
+                                <g id="#34A9FF:19%" opacity="0.600000024" stroke-dasharray="207.8057142857143,1740" mask="url(#mask-2)" transform="translate(174.000000, 174.000000) rotate(-183.600000) translate(-174.000000, -174.000000) ">
+                                    <use stroke="#979797" stroke-width="1" xlink:href="#path-7"></use>
+                                    <use stroke="#34A9FF" mask="url(#mask-8)" stroke-width="348" xlink:href="#path-7"></use>
+                                </g>
+                                <g id="#34A9FF:10%" opacity="0.5" stroke-dasharray="109.3714285714286,1740" mask="url(#mask-2)" transform="translate(174.000000, 174.000000) rotate(-252.000000) translate(-174.000000, -174.000000) ">
+                                    <use stroke="#979797" stroke-width="1" xlink:href="#path-9"></use>
+                                    <use stroke="#34A9FF" mask="url(#mask-10)" stroke-width="348" xlink:href="#path-9"></use>
+                                </g>
+                                <g id="#34A9FF:15%" opacity="0.400000006" stroke-dasharray="164.0571428571428,1740" mask="url(#mask-2)" transform="translate(174.000000, 174.000000) rotate(-288.000000) translate(-174.000000, -174.000000) ">
+                                    <use stroke="#979797" stroke-width="1" xlink:href="#path-11"></use>
+                                    <use stroke="#34A9FF" mask="url(#mask-12)" stroke-width="348" xlink:href="#path-11"></use>
+                                </g>
+                                <g id="#34A9FF:5%" opacity="0.300000012" stroke-dasharray="54.68571428571429,1740" mask="url(#mask-2)" transform="translate(174.000000, 174.000000) rotate(-342.000000) translate(-174.000000, -174.000000) ">
+                                    <use stroke="#979797" stroke-width="1" xlink:href="#path-13"></use>
+                                    <use stroke="#34A9FF" mask="url(#mask-14)" stroke-width="348" xlink:href="#path-13"></use>
+                                </g>
+                            </g>
+                            <circle id="Oval-9" stroke="#34A9FF" stroke-width="2" fill="rgba(42,47,57,1)" cx="174" cy="174" r="117"></circle>
+                            <text id="36%" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="291" y="240">36%</tspan>
+                            </text>
+                            <text id="15%" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="221" y="43">15%</tspan>
+                            </text>
+                            <text id="15%" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="56" y="281">15%</tspan>
+                            </text>
+                            <text id="19%" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="70" y="63">19%</tspan>
+                            </text>
+                            <text id="10%" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="9" y="178">10%</tspan>
+                            </text>
+                            <text id="5%" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="143" y="324">5%</tspan>
+                            </text>
+                        </g>
+                        <text id="1.8-Billion-WTE" font-family=".AppleSystemUIFont" font-size="17" font-weight="normal" fill="#FFFFFF">
+                            <tspan x="123" y="178">1.8 Billion WTE</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+                </div>
+                <div class="left" style="padding-top:60px;">
+                    <span class="s">
+                        WTE has issued a total of 1.8 billion tokens, which will never be issued, and are mainly used for: 1. Basestone partner, accounting for 15%; 100-day lockout; WTE number: 270,000,000. 2. Investment institute, accounting for 36%; WTE number: 648,000,000. 3. Team holding, accounting for 19%;  300-day lockout; WTE number: 342,000,000. 4. White List user holding, accounting for 10%; WTE number: 180,000,000. 5. Community award, accounting for 15%; WTE number: 270,000,000. 7. Project consultants, accounting for 5%; WTE number: 90,000,000.
+                    </span>
+                </div>
+            </div>
+
+            <div id="Home" class="footers">
+                <div class="left" style="align-items:center;">
+                    <div class="title" style="margin-top:146px;margin-bottom:102px;">
+                        <div class="bd"></div>
+                        <span class="name" style="text-align:center;">Contact Us</span>
+                    </div>
+                    <div class="pater">
+                        <span class="con">
+                            <a href="https://m.facebook.com/Witee-394083224388964/" target="_blank"
+                               style="text-decoration:none;">
+                              <img src="http://witee.laabit.com/image/ico_fb@2x.png" class="ts" alt="">
+                              <img src="http://witee.laabit.com/image/ico_fb@2x_active.png" class="ts1" alt="">
+                            </a>
+                        </span>
+                        <span class="con">
+                            <a href="https://twitter.com/_Witee_" target="_blank" style="text-decoration:none;">
+                              <img src="http://witee.laabit.com/image/ico_twitter@2x.png" class="ts" alt="">
+                              <img src="http://witee.laabit.com/image/ico_blue_twitter@2x_active.png" class="ts1" alt="">
+                             </a>
+                        </span>
+                        <span class="con">
+                            <a href="https://t.me/joinchat/HxEFeU9-WSRmCBS30redOQ" target="_blank"
+                               style="text-decoration:none;">
+                            <img src="http://witee.laabit.com/image/ico_telegram@2x.png" class="ts" alt="">
+                            <img src="http://witee.laabit.com/image/ico_blue_telegram@2x_active.png" class="ts1" alt="">
+                            </a>
+                        </span>
+                        <span class="con">
+                            <a href="https://github.com/witee-io" target="_blank" style="text-decoration:none;">
+                            <img src="http://witee.laabit.com/image/ico_github@2x.png" class="ts" alt="">
+                            <img src="http://witee.laabit.com/image/ico_blue_github@2x_active.png" class="ts1" alt="">
+                            </a>
+                        </span>
+                    </div>
+
+                    <div class="btm">
+                        <div class="btmL">Get first-hand information on important development progress and activities on WITEE.</div>
+                        <div class="btmR">
+                            <div class="tss" style="position: relative;">
+                                <svg width="284px" height="54px" viewBox="0 0 284 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="p1" transform="translate(-818.000000, -8203.000000)">
+                                        <g id="letmekown" transform="translate(258.000000, 7655.000000)">
+                                            <path d="M574,549 L843,549 L843,588 L830,601 L561,601 L561,562 L574,549 Z"
+                                                  id="Shape-Copy" stroke="#34A9FF"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                                <input type="text" v-model="email" placeholder="Email here" style="left:0;position: absolute;top: 0;width: 100%;height: 100%;background: none;padding: 18px; outline: none;">
+                            </div>
+                            <div class="btns1" @click="emailfun">Let me Know</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer" style="padding:0 149px; margin-top:281px;">
+                <img src="http://witee.laabit.com/image/logo@3x.png" alt="">
+                <div class="cl">
+                    <span><a href="book/witee_cn.pdf" target="_blank" style="text-decoration:none;">White Paper</a></span>
+                    <span><a href="https://github.com/witee-io" target="_blank" style="text-decoration:none;">GITHUB</a></span>
+                    <span><a href="roadmap.html" style="text-decoration:none;">Roadmap</a></span>
+                    <span><a href="token.html" style="text-decoration:none;">Token</a></span>
+                    <!--<span><a href="ww_en.html">Witee-Weekly</a></span>-->
+                    <!--<span><a href="Alpha.html" style="text-decoration:none;">Alpha</a></span>-->
+                    <!--<span><a href="ico.html"  style="text-decoration:none;">ICO</a></span>-->
+                </div>
+            </div>
+
+            <span class="links" style="padding-left:10%;">© 2018 witee.io</span>
+            <span class="links" style="">support@witee.io</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="script/config.js"></script>
+    <script type="text/javascript" src="script/newapp.js"></script>
+    <script type="text/javascript" src="script/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                email: '',
+                langesta: false,
+                fixBol: false,
+                youxiang: '',
+                mima: '',
+                dizhi: ''
+            },
+            methods: {
+                init: function() {
+
+                },
+                langefun: function(val) {
+                    location.href = val;
+                    this.langesta = false;
+                },
+                fixFun: function() {
+                    this.fixBol = !this.fixBol;
+                    this.youxiang='';
+                    this.mima='';
+                    this.dizhi='';
+                },
+                logFun: function() {
+                    var that = this;
+
+                    var phone = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+
+                    var jmz = {};
+                    jmz.GetLength = function(str) {
+                        ///<summary>获得字符串实际长度，中文2，英文1</summary>
+                        ///<param name="str">要获得长度的字符串</param>
+                        var realLength = 0, len = str.length, charCode = -1;
+                        for (var i = 0; i < len; i++) {
+                            charCode = str.charCodeAt(i);
+                            if (charCode >= 0 && charCode <= 128)
+                                realLength += 1;
+                            else
+                                realLength += 2;
+                        }
+                        return realLength;
+                    };
+                    if (!phone.test(that.youxiang)) {
+                        h.toasttips(1, 'Please fill in the correct mailbox！');
+                        return false;
+                    } else if (jmz.GetLength(that.dizhi) != 42) {
+                        h.toasttips(1, 'The address of the wallet is not correct！');
+                        return false;
+                    } else {
+                        h.ajax(function(ret, err) {
+                            if (ret.state == "0000") {
+								that.youxiang='';
+                               that.mima='';
+                               that.dizhi='';
+                                setTimeout(function () {
+                                    h.toasttips(0, ret.msg[1]);
+                                    that.fixBol = !that.fixBol;
+                                }, 300);
+                            } else {
+                                setTimeout(function () {
+                                    h.toasttips(1, ret.msg[1]);
+                                }, 300)
+
+                            }
+                        }, "/emailuser/register", "post", {
+                            email: that.youxiang,
+                            password: that.mima,
+                            wallet_address:that.dizhi
+                        });
+                    }
+                },
+                emailfun: function() {
+                    var that = this;
+                    var phone = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+                    if (!phone.test(this.email)) {
+                        h.toasttips(1, 'Your email！');
+                        return false;
+                    }
+                    var showProgress = h.showProgress('Subscribe');
+                    h.ajax(function(ret, err) {
+                        h.hideProgress(showProgress);
+                        if (ret.state == "0000") {
+                          that.youxiang='';
+                               that.mima='';
+                               that.dizhi='';
+                            setTimeout(function() {
+                                h.toasttips(0, 'Subscription successful');
+                            }, 300);
+                        } else {
+                            if (ret.msg == '已订阅') {
+                                setTimeout(function() {
+                                    h.toasttips(1, 'Subscribed');
+                                }, 300)
+                            } else {
+                                setTimeout(function() {
+                                    h.toasttips(1, 'Subscription failure');
+                                }, 300)
+                            }
+
+                        }
+                        that.email = '';
+                    }, "subscribe", "post", {
+                        email: this.email
+                    });
+                }
+            },
+        });
+
+        h.ready();
+    </script>
+</body>
+
+</html>

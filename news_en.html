@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>WITEE</title>
+    <meta itemprop="name" content="witee">
+    <meta name="keywords" content="WTE,WITEE,WITEE.IO,WTEHUB,WTEFUND,WTECYCLE,Robo-advisor,Smart investment,Robo-advisor" />
+    <meta name="description" itemprop="description" content="WITEE conducts big data collection and modeling on the public opinion of the digital cryptocurrency and transaction information, and then conducts deep learning for data model through artificial intelligence. After efficient strategy analysis, WITEE provides a variety of intelligent digital cryptocurrency investment services." />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+    <link rel="shortcut icon" href="https://witee.laabit.com/image/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/index0.css" />
+    <link rel="stylesheet" type="text/css" href="css/phone.css" />
+    <style>
+        .wrap {
+            padding: 60px 10%;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .title .bd {
+            background: #34A9FF;
+            width: 1px;
+            height: 15px;
+            transform: rotateZ(30deg);
+            margin-right: 10px;
+            margin-top: -2px;
+        }
+
+        .title .name {
+            color: #34A9FF;
+            line-height: 20px;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            font-family: Exo2-Bold;
+        }
+
+        .cells {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .cells img {
+            width: 250px;
+        }
+
+        .cells .cellsr {
+            display: inline-block;
+            width: calc(100% - 290px);
+            margin-left: 20px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .cells .cellsr .crt {
+            font-size: 24px;
+            color: #FFFFFF;
+            font-family: PingFangSC-Medium;
+        }
+
+        .cells .cellsr .crd {
+            font-size: 14px;
+            color: #778592;
+            line-height: 20px;
+            font-family: PingFangSC-Regular;
+        }
+
+        .cells .cellsr .crm {
+            font-size: 14px;
+            color: #778592;
+            line-height: 20px;
+            margin-top: 15px;
+            height: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            font-family: PingFangSC-Regular;
+        }
+
+        .cells .cellsr .more {
+            font-family: Exo2-Bold;
+            font-size: 12px;
+            color: #34A9FF;
+            letter-spacing: 2px;
+            text-align: center;
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        @media screen and (max-width: 856px) {
+            .title {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .cells .cellsr {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .cells img {
+                width: 100%;
+            }
+            .cells .crd {
+                margin-top: 10px;
+            }
+            .cells .cellsr .crt {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <a class="btops" href="#one"><img src="image/ttop.png" alt=""></a>
+        <!-- bg -->
+        <img class="bgs bgm" src="image/bg_oval.png" alt="">
+        <img class="bgs bg1" src="image/bg_shape_top_right.png" alt="">
+        <img class="bgs bg2" src="image/bg_shapes.png" alt="">
+        <!-- <img class="bgs bg3" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg4" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg5" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg6" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg7" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg8" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg9" src="image/bg_shapes.png" alt=""> -->
+        <div class="ups">
+            <div class="fixs" v-show="fixBol">
+                <img @click="fixFun" class="clss" src="image/icon_close.png" alt="">
+                <p class="row1">Register as a WITEE member and receive WTE awards after WITEE is officially launched.<br>Limited quantity on a first-come-first-served basis.</p>
+                <p class="row2">WITEE will introduce KYC certification. Do not use multiple mailboxes and wallet addresses to register and receive rewards.</p>
+                <input type="text" v-model="youxiang" name="" value="" placeholder="E-mail">
+                <input type="text" v-model="mima" name="" value="" placeholder="Login password">
+                <input type="text" v-model="dizhi" name="" value="" placeholder="Wallet address">
+                <div class="btns1" @click="logFun" style="margin-left:0;">Register</div>
+            </div>
+            <div class="header" id="one">
+                <div class="HLeft">
+                    <a href="index.html"><img src="http://witee.laabit.com/image/logo@3x.png" alt=""></a>
+                </div>
+                <div class="HRight">
+                    <span><a href="index_en.html">Home</a ></span>
+                    <span><a href="index_en.html?type=tdjs">Team</a ></span>
+                    <span class="active"><a href="news_en.html">News</a></span>
+                    <span><a href="roadmap_en.html">Roadmap</a></span>
+                    <span><a href="token_en.html">TOKEN</a></span>
+                    <span style="width: 163px;"><a href="ww_en.html">Witee-Weekly</a></span>
+                    <span style="width: 144px;"><a href="book/witee_en.pdf" target="_blank">WHITE PAPER</a></span>
+                    <span @click="fixFun"><a>Log in</a></span>
+                    <!--<span><a href="ico.html">ico</a></span>-->
+                    <div class="lan">
+                        <img src="http://witee.laabit.com/image/en.png" alt="">
+                        <div class="lange">
+                            <p @click="langesta = true">
+                                EN
+                            </p>
+                            <div class="langebox" v-if="langesta">
+                                <span @click="langefun('news.html')"><i>&radic;</i>CHT</span>
+                                <span class="active" @click="langefun('news_en.html')"><i>&radic;</i>EN</span>
+                            </div>
+                        </div>
+                        <img src="http://witee.laabit.com/image/down.png" style="cursor: pointer;" @click="langesta = true" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="wrap sections">
+
+                <div class="title" style="margin-bottom: 40px;">
+                    <div class="bd"></div>
+                    <span class="name" style="text-align:center;">News</span>
+                </div>
+
+                <div class="cells" v-for="val in list">
+                    <a target="_blank" :href="'news_dtl_en.html?id='+val.id">
+                        <img :src="val.cover_image" alt="">
+                        <div class="cellsr">
+                            <div class="crt">{{val.title}}</div>
+                            <div class="crd">{{val.createtime}}</div>
+                            <div class="crm">{{val.description}}</div>
+                            <div class="more">learn more</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer" style="padding:0 149px; margin-top:281px;">
+                <img src="image/logo@3x.png" alt="">
+                <div class="cl">
+                    <span><a href="book/witee_cn.pdf" target="_blank" style="text-decoration:none;">White Paper</a></span>
+                    <span><a href="https://github.com/witee-io" target="_blank" style="text-decoration:none;">GITHUB</a></span>
+                    <span><a href="roadmap.html" style="text-decoration:none;">Roadmap</a></span>
+                    <span><a href="token.html" style="text-decoration:none;">Token</a></span>
+                    <!--<span><a href="ww_en.html">Witee-Weekly</a></span>-->
+                    <!--<span><a href="Alpha_en.html"   style="text-decoration:none;">Alpha</a></span>-->
+                    <!--<span><a href="ico_en.html"   style="text-decoration:none;">ICO</a></span>-->
+                </div>
+            </div>
+
+            <span class="links" style="padding-left:10%;">© 2018 witee.io</span>
+            <span class="links" style="">support@witee.io</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="script/config.js"></script>
+    <script type="text/javascript" src="script/newapp.js"></script>
+    <script type="text/javascript" src="script/vue.js"></script>
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/swiper.min.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                langesta: false,
+                fixBol: false,
+                list: [],
+                youxiang: '',
+                mima: '',
+                dizhi: ''
+            },
+            methods: {
+                langefun: function(val) {
+                    location.href = val;
+                    this.langesta = false;
+                },
+                logFun: function() {
+                    var that = this;
+
+                    var phone = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+
+                    var jmz = {};
+                    jmz.GetLength = function(str) {
+                        ///<summary>获得字符串实际长度，中文2，英文1</summary>
+                        ///<param name="str">要获得长度的字符串</param>
+                        var realLength = 0, len = str.length, charCode = -1;
+                        for (var i = 0; i < len; i++) {
+                            charCode = str.charCodeAt(i);
+                            if (charCode >= 0 && charCode <= 128)
+                                realLength += 1;
+                            else
+                                realLength += 2;
+                        }
+                        return realLength;
+                    };
+                    if (!phone.test(that.youxiang)) {
+                        h.toasttips(1, 'Please fill in the correct mailbox！');
+                        return false;
+                    } else if (jmz.GetLength(that.dizhi) != 42) {
+                        h.toasttips(1, 'The address of the wallet is not correct！');
+                        return false;
+                    } else {
+                        h.ajax(function(ret, err) {
+                            if (ret.state == "0000") {
+                              that.youxiang='';
+                               that.mima='';
+                               that.dizhi='';
+                                setTimeout(function () {
+                                    h.toasttips(0, ret.msg[1]);
+                                    that.fixBol = !that.fixBol;
+                                }, 300);
+                            } else {
+                                setTimeout(function () {
+                                    h.toasttips(1, ret.msg[1]);
+                                }, 300)
+
+                            }
+                        }, "/emailuser/register", "post", {
+                            email: that.youxiang,
+                            password: that.mima,
+                            wallet_address:that.dizhi
+                        });
+                    }
+                },
+                fixFun: function() {
+                    this.fixBol = !this.fixBol;
+                    this.youxiang='';
+                    this.mima='';
+                    this.dizhi='';
+                },
+                init: function() {
+                    var that = this;
+                    h.ajax(function (ret, err) {
+                        if (ret.state == "0000") {
+                            that.list = ret.data;
+                        }
+                    }, "article/lists", "post", {
+                        category_id: '2'
+                    });
+                },
+            },
+        });
+
+        h.ready();
+    </script>
+</body>
+
+</html>

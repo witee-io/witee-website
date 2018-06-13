@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>WITEE</title>
+  	<meta itemprop="name" content="witee">
+    <meta name="keywords" content="WTE,WITEE,WITEE.IO,WTEHUB,WTEFUND,WTECYCLE,Robo-advisor,Smart investment,Robo-advisor" />
+    <meta name="description" itemprop="description" content="WITEE conducts big data collection and modeling on the public opinion of the digital cryptocurrency and transaction information, and then conducts deep learning for data model through artificial intelligence. After efficient strategy analysis, WITEE provides a variety of intelligent digital cryptocurrency investment services." />
+  	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+    <link rel="shortcut icon" href="https://witee.laabit.com/image/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/index0.css" />
+    <link rel="stylesheet" type="text/css" href="css/phone.css" />
+    <style>
+        #Home {
+            display: inline-block;
+        }
+
+        .ti {
+            font-family: Exo2-Medium;
+            font-size: 24px;
+            color: #FFFFFF;
+            text-align: left;
+        }
+
+        .cn {
+            font-family: Exo2-Regular;
+            font-size: 14px;
+            color: #5D5C71;
+            line-height: 32px;
+        }
+
+        .btns {
+            margin-top: 24px;
+        }
+
+        .btmR {
+            display: inline-block;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .btmR input {
+            width: 270px !important;
+            height: 50px !important;
+        }
+
+        .btmR span {
+            margin-left: 20px;
+            font-size: 0.6rem;
+        }
+
+        #Home .btns1 {
+            display: inline-block;
+            background: #34A9FF;
+            text-align: center;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 0.9rem;
+            color: white;
+            -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+            font-family: Exo2-Medium;
+        }
+
+        .btns1 {
+            vertical-align: top;
+            margin-top: 10px;
+            margin-left: 5px;
+            height: 45px !important;
+            line-height: 45px !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- bg -->
+        <img class="bgs bgm" src="image/bg_oval.png" alt="">
+        <img class="bgs bg1" src="image/bg_shape_top_right.png" alt="">
+        <img class="bgs bg2" src="image/bg_shapes.png" alt="">
+        <!-- <img class="bgs bg3" src="image/bg_shapes.png" alt=""> -->
+        <!-- <img class="bgs bg4" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg5" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg6" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg7" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg8" src="image/bg_shapes.png" alt="">
+        <img class="bgs bg9" src="image/bg_shapes.png" alt="">
+         -->
+        <div class="ups">
+            <div class="fixs" v-show="fixBol">
+                <img @click="fixFun" class="clss" src="image/icon_close.png" alt="">
+                <p class="row1">Registered as a WITEE member, WTE can be rewarded after WITEE is formally launched.<br>The number is limited, first come first.</p>
+                <p class="row2">WITEE will introduce KYC authentication. Do not reuse multiple mailboxes and wallet addresses to register and receive rewards.</p>
+                <input type="text" v-model="youxiang" name="" value="" placeholder="Email Address">
+                <input type="text" v-model="mima" name="" value="" placeholder="Login password">
+                <input type="text" v-model="dizhi" name="" value="" placeholder="Purse address">
+                <div class="btns1" @click="logFun" style="margin-left:0;">Registration</div>
+            </div>
+            <div class="header">
+                <div class="HLeft">
+                    <a href="index.html"><img src="http://witee.laabit.com/image/logo@3x.png" alt=""></a>
+                </div>
+                <div class="HRight">
+                    <span><a href="index_en.html">Home</a></span>
+                    <span><a href="news_en.html">News</a></span>
+                    <span><a href="roadmap_en.html">Roadmap</a></span>
+                    <span><a href="token_en.html">TOKEN</a></span>
+                    <span><a href="ww_en.html">Witee-Weekly</a></span>
+                    <span><a href="book/witee_en.pdf" target="_blank">WHITE PAPER</a></span>
+                    <span @click="fixFun"><a>Log in</a></span>
+                    <!--<span><a href="ico.html">ico</a></span>-->
+                    <div class="lan">
+                        <img src="http://witee.laabit.com/image/en.png" alt="">
+                        <div class="lange">
+                            <p @click="langesta = true">
+                                EN
+                            </p>
+                            <div class="langebox" v-if="langesta">
+                                <span @click="langefun('Alpha.html')"><i>&radic;</i>CHT</span>
+                                <span class="active" @click="langefun('Alpha_en.html')"><i>&radic;</i>EN</span>
+                            </div>
+                        </div>
+                        <img src="http://witee.laabit.com/image/down.png" style="cursor: pointer;" @click="langesta = true" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Home" class="Alpha"  style="min-height: 100vh;margin-top:10vh;width: 66%;">
+                <p class="ti" style="margin-bottom:5vh;">Participate in WITEE White List public offering and get one ETH capital of investment</p>
+                <p class="cn">WITEE is a super smart investment service platform developed for digital currency transaction based on blockchain technology. The platform covers robo-advisor, fund, DAPP, WTECYCLE and WTEHUB. WITEE provides you with real-time online public opinion analysis through data mining modeling, analysis, AI model development strategy model and exchange & repurchase ecological chain. Under the premise of controlling the risk loss of digital assets, WITEE maximizes continuous, stable and high-valued returns for investors.
+    </p>
+                <p class="cn" style="margin-top:2vh !important;">
+                    Now we make the following announcement on WITEE:
+                    <br>1.	The White List proportion is set as 1 ETH: 10120 WTE.
+                    <br>2.	The first 10,000 members who participated in the public offering and private placement can participate in the initial beta test of the project and use the WITEE investment platform for free.
+                  	<br>3.	The platform will issue 1 ETH for each account of the first 10,000 users participating in the beta test and perform WTE operation at the official appointed time. The profits will be returned to all individuals and the principal will be returned to the platform. The platform will give back profits after one week settlement.
+                  	<br>4.	According to the relevant state policies and regulations, citizens of the People's Republic of China, the United States of America, and Singapore will not be able to participate in this public offering.
+                  	<br>5.  Please pay attention to the official website for specific activity notice.
+                    <div>
+                    <p class="cn" style="color: white;margin-bottom: 0px;margin-top: 5vh;">Tell me when it's about to start</p>
+                    <div class="btmR">
+                        <div class="tss" style="position: relative;">
+                            <svg width="270px" height="50px" viewBox="0 0 284 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="p1" transform="translate(-818.000000, -8203.000000)">
+                                    <g id="letmekown" transform="translate(258.000000, 7655.000000)">
+                                        <path d="M574,549 L843,549 L843,588 L830,601 L561,601 L561,562 L574,549 Z" id="Shape-Copy" stroke="#34A9FF"></path>
+
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                            <input type="text" v-model="email" placeholder="Email here" style="left:0;position: absolute;top: 0;width: 100%;height: 100%;background: none;padding: 18px; outline: none;">
+                        </div>
+                    </div>
+                    <div class="btns1" style="cursor: pointer;" @click="emailfun">Subscribe</div>
+                </div>
+            </div>
+
+            <div class="footer" style="padding:0 149px; margin-top:281px;">
+                <img src="image/logo@3x.png" alt="">
+                <div class="cl">
+                    <span><a href="book/witee_cn.pdf" target="_blank" style="text-decoration:none;">White Paper</a></span>
+                    <span><a href="https://github.com/witee-io" target="_blank" style="text-decoration:none;">GITHUB</a></span>
+                    <span><a href="roadmap.html" style="text-decoration:none;">Roadmap</a></span>
+                    <span><a href="token.html" style="text-decoration:none;">Token</a></span>
+                    <!--<span><a href="ww_en.html">Witee-Weekly</a></span>-->
+                    <!--<span><a href="Alpha_en.html"   style="text-decoration:none;">Alpha</a></span>-->
+                    <!--<span><a href="ico_en.html"   style="text-decoration:none;">ICO</a></span>-->
+                </div>
+            </div>
+
+            <span class="links" style="padding-left:10%;">© 2018 witee.io</span>
+            <span class="links" style="">support@witee.io</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="script/config.js"></script>
+    <script type="text/javascript" src="script/newapp.js"></script>
+    <script type="text/javascript" src="script/vue.js"></script>
+    <script type="text/javascript">
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                email:'',
+                langesta:false,
+                fixBol: false,
+                youxiang: '',
+                dizhi: '',
+                mima: '',
+            },
+            methods: {
+                init:function () {
+
+                },
+                fixFun: function() {
+                    this.fixBol = !this.fixBol;
+                    this.youxiang='';
+                    this.mima='';
+                    this.dizhi='';
+                },
+                langefun:function(val){
+                    location.href = val;
+                    this.langesta = false;
+                },
+                logFun: function() {
+                    var that = this;
+
+                    var phone = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+
+                    var jmz = {};
+                    jmz.GetLength = function(str) {
+                      ///<summary>获得字符串实际长度，中文2，英文1</summary>
+                      ///<param name="str">要获得长度的字符串</param>
+                      var realLength = 0, len = str.length, charCode = -1;
+                      for (var i = 0; i < len; i++) {
+                        charCode = str.charCodeAt(i);
+                        if (charCode >= 0 && charCode <= 128)
+                           realLength += 1;
+                        else
+                           realLength += 2;
+                      }
+                      return realLength;
+                    };
+                    if (!phone.test(that.youxiang)) {
+                        h.toasttips(1, 'Please fill in the correct mailbox！');
+                        return false;
+                    } else if (jmz.GetLength(that.dizhi) != 42) {
+                        h.toasttips(1, 'The address of the wallet is not correct！');
+                        return false;
+                    } else {
+                        h.ajax(function(ret, err) {
+                            if (ret.state == "0000") {
+                              that.youxiang='';
+                               that.mima='';
+                               that.dizhi='';
+                                setTimeout(function () {
+                                    h.toasttips(0, ret.msg[1]);
+                                    that.fixBol = !that.fixBol;
+                                }, 300);
+                            } else {
+                                setTimeout(function () {
+                                    h.toasttips(1, ret.msg[1]);
+                                }, 300)
+
+                            }
+                        }, "/emailuser/register", "post", {
+                            email: that.youxiang,
+                            password: that.mima,
+                            wallet_address:that.dizhi
+                        });
+                    }
+                },
+                emailfun:function(){
+                    var that = this;
+                    var phone = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+                    if(!phone.test(this.email)){
+                        h.toasttips(1, 'Your email！');
+                        return false;
+                    }
+                    var showProgress = h.showProgress('Subscribe');
+                    h.ajax(function(ret, err) {
+                        h.hideProgress(showProgress);
+                        if (ret.state == "0000") {
+                            setTimeout(function() {
+                                h.toasttips(0, 'Subscription successful');
+                            }, 300);
+                        } else {
+                            if(ret.msg == '已订阅'){
+                                setTimeout(function() {
+                                    h.toasttips(1, 'Subscribed');
+                                }, 300)
+                            } else {
+                                setTimeout(function() {
+                                    h.toasttips(1, 'Subscription failure');
+                                }, 300)
+                            }
+
+                        }
+                        that.email = '';
+                    },"subscribe","post",{
+                        email:this.email
+                    });
+                }
+            },
+        });
+
+        h.ready();
+    </script>
+</body>
+
+</html>
